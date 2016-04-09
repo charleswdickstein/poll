@@ -26,7 +26,8 @@ error_reporting(E_ALL);
 <input type="radio" name="yourvote" value="2">Bernie Sanders<br>
 <input type="hidden" name="yoursandersvote" value="Bernie Sanders">
 <input type="radio" name="yourvote" value="3">Ted Cruz<br>
-<input type="hidden" name="yoursandersvote" value="Bernie Sanders">      
+<input type="hidden" name="yourcruzvote" value="Bernie Sanders">
+<input type="hidden" name="yourbloombergvote" value="Michael Bloomberg">     
 <!-- <h2>Enter your full name: <br>
  <input type=text name=yourname>
  </h2>
@@ -53,16 +54,16 @@ switch ($voteValue){
 		$canditateNameValue = $_POST['yourclintonvote'];
 		break;
 	case '1':
-		$canditateNameValue = $_POST["Donald Trump"];
+		$canditateNameValue = $_POST['yourtrumpvote'];
 		break;
 	case '2':
-		$canditateNameValue = $_POST["Bernie Sanders"];
+		$canditateNameValue = $_POST['yoursandersvote'];
 		break;
 	case '3':
-		$canditateNameValue = $_POST["Ted Cruz"];
+		$canditateNameValue = $_POST['yourcruzvote'];
 		break;
 	default:
-		$canditateNameValue = $_POST["Michael Bloomberg"];
+		$canditateNameValue = $_POST['yourbloombergvote'];
 
 }
 
@@ -76,7 +77,7 @@ $theDecision = array($canditateNameValue,$voteValue);
 <h2>Your Complete Info:</h2>
 
 <ul>
-	<li><h3>Your vote: <?php echo $voteValue; ?> </li>
+	<li><h3>Your vote: <?php echo $theDecision; ?> </li>
 <!-- 	<li><h3>Your age: <?php echo $theage; ?> </li>
 	<li><h3>Your weight: <?php echo $theweight; ?> </li> -->
 
