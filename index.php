@@ -22,7 +22,7 @@ error_reporting(E_ALL);
 <input type="radio" name="yourvote" value="0" checked>Hilary Clinton<br>
 <input type="hidden" name="yourclintonvote" value="Hilary Clinton">
 <input type="radio" name="yourvote" value="1">Donald Trump<br>
-<input type="hidden" name="yourtrumpvote" value="Dondald Trump">
+<input type="hidden" name="yourtrumpvote" value="Donald Trump">
 <input type="radio" name="yourvote" value="2">Bernie Sanders<br>
 <input type="hidden" name="yoursandersvote" value="Bernie Sanders">
 <input type="radio" name="yourvote" value="3">Ted Cruz<br>
