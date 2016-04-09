@@ -52,7 +52,7 @@ $theweight = $_POST['yourweight']."\n";
 
 </ul>
 <?php
-	$myfile = fopen('myinfo.txt', 'a');
+	$myfile = fopen('myinfo.csv', 'a');
 	
 	fwrite($myfile, $thename);
 	fwrite($myfile, $theage);
