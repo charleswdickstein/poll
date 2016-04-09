@@ -54,13 +54,13 @@ $theweight = $_POST['yourweight']."\n";
 <?php
 	$myfile = fopen('myinfo.csv', 'a');
 	
-	fwrite($myfile, $thename);
-	fwrite($myfile, $theage);
-	fwrite($myfile, $theweight);
+	fwrite($myfile, array($thename, $theage, $theweight));
+	// fwrite($myfile, $theage);
+	// fwrite($myfile, $theweight);
 	
 	fclose($myfile);
 	print "File written with this data: ";
-	print "$thename $theage $theweight";
+	print array($thename, $theage, $theweight));
 
 ?>
 
