@@ -29,8 +29,8 @@ error_reporting(E_ALL);
 	print "<p>";
 	
 	for ($line=0; $line<count($thefile); $line++) {
+		echo "This is the print statement".$thefile[$line];
 		if ($thefile[$line] == 0){
-			echo $thefile[$line];
 			$clintonCount++;
 		}
 		else if ($thefile[$line] == 1){
@@ -42,10 +42,8 @@ error_reporting(E_ALL);
 		else if ($thefile[$line] == 3){
 			$cruzCount++;
 		}
-		else{
-			$bloombergCount++;
-		}
-		print trim($thefile[$line])."<br />\n";
+		
+		//print trim($thefile[$line])."<br />\n";
 	}
 	echo "Votes: ";
 	echo "Clinton: ".$clintonCount."\n";
@@ -55,6 +53,10 @@ error_reporting(E_ALL);
 
 
 	
+
+
+
+
 	
 	print "</p>\n";
 	

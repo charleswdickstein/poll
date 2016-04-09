@@ -21,10 +21,17 @@ error_reporting(E_ALL);
        method="post">
 <input type="radio" name="yourvote" value="0" checked>Hilary Clinton<br>
 <input type="hidden" name="yourclintonvote" value="Hilary Clinton">
+
+
+
 <input type="radio" name="yourvote" value="1">Donald Trump<br>
 <input type="hidden" name="yourtrumpvote" value="Donald Trump">
+
+
 <input type="radio" name="yourvote" value="2">Bernie Sanders<br>
 <input type="hidden" name="yoursandersvote" value="Bernie Sanders">
+
+
 <input type="radio" name="yourvote" value="3">Ted Cruz<br>
 <input type="hidden" name="yourcruzvote" value="Ted Cruz">
 <input type="hidden" name="yourbloombergvote" value="Michael Bloomberg">     
@@ -66,6 +73,8 @@ switch ($voteValue){
 		$canditateNameValue = $_POST['yourbloombergvote'];
 
 }
+
+
 
 $theDecision = array($canditateNameValue,$voteValue);
 // $trump = $_POST['yourvote']."\n";
