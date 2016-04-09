@@ -36,13 +36,13 @@ error_reporting(E_ALL);
 		if ($thefile[$line][$key] == 0){
 			$clintonCount++;
 		}
-		else if ($thefile[1][$key] == 1){
+		else if ($thefile[$line][$key] == 1){
 			$trumpCount++;
 		}
-		else if ($thefile[1][$key] == 2){
+		else if ($thefile[$line][$key] == 2){
 			$sandersCount++;
 		}
-		else if ($thefile[1][$key] == 3){
+		else if ($thefile[$line][$key] == 3){
 			$cruzCount++;
 		}
 		
