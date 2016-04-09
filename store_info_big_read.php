@@ -32,7 +32,7 @@ error_reporting(E_ALL);
 		for ($key = 0; $key < count($line); $key++){
 
 		
-		echo "This is the print statement".$thefile[1][$key];
+		//echo "This is the print statement".$thefile[1][$key];
 		if ($thefile[1][$key] == 0){
 			$clintonCount++;
 		}
@@ -49,7 +49,12 @@ error_reporting(E_ALL);
 		//print trim($thefile[$line])."<br />\n";
 	}
 }
-	echo "Votes: ";
+
+	// Calculate Results 
+	$totalVotes = $clintonCount.$trumpCount.$sandersCount.$cruzCount;
+
+
+	echo "Votes: ".$totalVotes;
 	echo "Clinton: ".$clintonCount."\n";
 	echo "Trump: ".$trumpCount."\n";
 	echo "Sanders: ".$sandersCount."\n";
