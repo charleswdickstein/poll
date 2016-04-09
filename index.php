@@ -41,6 +41,7 @@ error_reporting(E_ALL);
 $thename = $_POST['yourname']."\n";
 $theage = $_POST['yourage']."\n";
 $theweight = $_POST['yourweight']."\n";
+$theValues = array($thename, $theage, $theweight);
 ?>
 
 <h2>Your Complete Info:</h2>
@@ -54,7 +55,8 @@ $theweight = $_POST['yourweight']."\n";
 <?php
 	$myfile = fopen('myinfo.csv', 'a');
 	
-	fwrite($myfile, array($thename, $theage, $theweight));
+	fputcsv($myfile, $line);
+	fwrite($myfile, $theValues);
 	// fwrite($myfile, $theage);
 	// fwrite($myfile, $theweight);
 	
