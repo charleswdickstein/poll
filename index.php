@@ -10,8 +10,8 @@ error_reporting(E_ALL);
 </head>
 <body bgcolor=LavenderBlush>
 <ul>
-	<li><a href="store_info_big_read.php"></a></li>
-	<li><a href="store_info_line_read.php"></a></li>
+	<li><a href="store_info_big_read.php"></a>Big Read</li>
+	<li><a href="store_info_line_read.php"></a>Line Read</li>
 </ul>
 	
 <h1>Hello, <?php echo $_POST['yourname']; ?>! </h1>
