@@ -39,11 +39,11 @@ error_reporting(E_ALL);
 <input type=reset value=Cancel>
 
 </form>
-<h1>Hello, <?php echo $_POST['yourname']; ?>! </h1>
+<h1>Hello, <?php echo $_POST['yourvote']; ?>! </h1>
 <?php
+$canditateNameValue = "Candidate"."\n";
 $voteValue = $_POST['yourvote']."\n";
-$canditateNameValue = "Candidate"."\n"
-$theDecision = array($voteValue, $canditateNameValue);
+$theDecision = array($canditateNameValue,$voteValue);
 // $trump = $_POST['yourvote']."\n";
 // $sanders = $_POST['yourvote']."\n";
 // $cruz = $_POST['yourvote']."\n";
