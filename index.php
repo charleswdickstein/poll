@@ -19,7 +19,7 @@ error_reporting(E_ALL);
 
 <form action="https://aqueous-tundra-58634.herokuapp.com"
        method="post">
-<input type="radio" name="yourvote" value="0" checked>Hilary Clinton<br>
+<input type="radio" name="yourvote" value="0"><br>
 <input type="hidden" name="yourclintonvote" value="Hilary Clinton">
 
 
