@@ -21,11 +21,38 @@ error_reporting(E_ALL);
 
 <?php
 	$thefile = file('myinfo.csv');
+	$clintonCount = 0;
+	$trumpCount = 0;
+	$sandersCount = 0;
+	$cruzCount = 0;
+	$bloombergCount = 0;
 	print "<p>";
 	
 	for ($line=0; $line<count($thefile); $line++) {
+		if ($thefile[$line] == 0){
+			$clintonCount++;
+		}
+		else if ($thefile[$line] == 1){
+			$trumpCount++;
+		}
+		else if ($thefile[$line] == 2){
+			$sandersCount++;
+		}
+		else if ($thefile[$line] == 3){
+			$cruzCount++;
+		}
+		else{
+			$bloombergCount++;
+		}
 		print trim($thefile[$line])."<br />\n";
 	}
+	
+	echo "Clinton: ".$clintonCount;
+	echo "Trump: ".$trumpCount;
+	echo "Sanders: ".$sandersCount;
+	echo "Cruz:  ".$cruzCount;
+
+
 	
 	
 	print "</p>\n";
