@@ -13,7 +13,7 @@ error_reporting(E_ALL);
 <ul>
 	<li><a href="store_info_big_read.php">Big Read</a></li>
 	<li><a href="store_info_line_read.php">Line Read</a></li>
-	<li><a href="myinfo.txt">Text File</a></li>
+	<li><a href="myinfo.csv">Text File</a></li>
 </ul>
 	<h1>Form to save your name, age, and weight </h2>
 
