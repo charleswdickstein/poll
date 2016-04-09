@@ -41,8 +41,27 @@ error_reporting(E_ALL);
 </form>
 <h1>Hello, <?php echo $_POST['yourvote']; ?>! </h1>
 <?php
-$canditateNameValue = "Candidate"."\n";
-$voteValue = $_POST['yourvote']."\n";
+$canditateNameValue = "";
+$voteValue = $_POST['yourvote'];
+
+switch ($voteValue){
+	case '0':
+		$canditateNameValue = $_POST["Hilary Clinton"];
+		break;
+	case '1':
+		$canditateNameValue = $_POST["Donald Trump"];
+		break;
+	case '2':
+		$canditateNameValue = $_POST["Bernie Sanders"];
+		break;
+	case '3':
+		$canditateNameValue = $_POST["Ted Cruz"];
+		break;
+	default:
+		$canditateNameValue = $_POST["Michael Bloomberg"];
+
+}
+
 $theDecision = array($canditateNameValue,$voteValue);
 // $trump = $_POST['yourvote']."\n";
 // $sanders = $_POST['yourvote']."\n";
