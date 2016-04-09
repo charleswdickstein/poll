@@ -76,7 +76,7 @@ switch ($voteValue){
 
 
 
-$theDecision = array($canditateNameValue,$voteValue);
+$theDecision = array($canditateNameValue => $voteValue);
 // $trump = $_POST['yourvote']."\n";
 // $sanders = $_POST['yourvote']."\n";
 // $cruz = $_POST['yourvote']."\n";
