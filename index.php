@@ -22,8 +22,6 @@ error_reporting(E_ALL);
 <input type="radio" name="yourvote" value="0"><br>
 <input type="hidden" name="yourclintonvote" value="Hilary Clinton">
 
-
-
 <input type="radio" name="yourvote" value="1">Donald Trump<br>
 <input type="hidden" name="yourtrumpvote" value="Donald Trump">
 
