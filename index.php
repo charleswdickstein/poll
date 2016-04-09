@@ -19,8 +19,11 @@ error_reporting(E_ALL);
 
 <form action="https://aqueous-tundra-58634.herokuapp.com"
        method="post">
-       
-<h2>Enter your full name: <br>
+<input type="radio" name="yourvote" value="0" checked>Hilary Clinton<br>
+<input type="radio" name="yourvote" value="1">Donald Trump<br>
+<input type="radio" name="yourvote" value="2">Bernie Sanders<br>
+<input type="radio" name="yourvote" value="3">Ted Cruz<br>      
+<!-- <h2>Enter your full name: <br>
  <input type=text name=yourname>
  </h2>
  
@@ -30,7 +33,7 @@ error_reporting(E_ALL);
  
 <h2>Enter your weight: <br>
  <input type=text name=yourweight>
- </h2>
+ </h2> -->
  
 <input type=submit value="Submit your info!">
 <input type=reset value=Cancel>
@@ -38,31 +41,32 @@ error_reporting(E_ALL);
 </form>
 <h1>Hello, <?php echo $_POST['yourname']; ?>! </h1>
 <?php
-$thename = $_POST['yourname']."\n";
-$theage = $_POST['yourage']."\n";
-$theweight = $_POST['yourweight']."\n";
-$theValues = array($thename, $theage, $theweight);
+$voteValue = $_POST['yourvote']."\n";
+// $trump = $_POST['yourvote']."\n";
+// $sanders = $_POST['yourvote']."\n";
+// $cruz = $_POST['yourvote']."\n";
+// $theValues = array($clinton, $trump, $sanders, $cruz);
 ?>
 
 <h2>Your Complete Info:</h2>
 
 <ul>
-	<li><h3>Your name: <?php echo $thename; ?> </li>
-	<li><h3>Your age: <?php echo $theage; ?> </li>
-	<li><h3>Your weight: <?php echo $theweight; ?> </li>
+	<li><h3>Your vote: <?php echo $voteValue; ?> </li>
+<!-- 	<li><h3>Your age: <?php echo $theage; ?> </li>
+	<li><h3>Your weight: <?php echo $theweight; ?> </li> -->
 
 </ul>
 <?php
 	$myfile = fopen('myinfo.csv', 'a');
 	
-	fputcsv($myfile, $theValues);
+	fputcsv($myfile, $voteValue);
 	//fwrite($myfile, $theValues);
 	// fwrite($myfile, $theage);
 	// fwrite($myfile, $theweight);
 	
 	fclose($myfile);
 	print "File written with this data: ";
-	print $theValues;
+	print $voteValue;
 
 ?>
 
