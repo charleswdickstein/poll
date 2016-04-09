@@ -20,6 +20,7 @@ error_reporting(E_ALL);
 <form action="https://aqueous-tundra-58634.herokuapp.com"
        method="post">
 <input type="radio" name="yourvote" value="0" checked>Hilary Clinton<br>
+
 <input type="radio" name="yourvote" value="1">Donald Trump<br>
 <input type="radio" name="yourvote" value="2">Bernie Sanders<br>
 <input type="radio" name="yourvote" value="3">Ted Cruz<br>      
@@ -43,10 +44,10 @@ error_reporting(E_ALL);
 <?php
 $canditateNameValue = "";
 $voteValue = $_POST['yourvote'];
-
+$clinton = "Hilary Clinton;";
 switch ($voteValue){
 	case '0':
-		$canditateNameValue = $_POST["Hilary Clinton"];
+		$canditateNameValue = $_POST[$clinton];
 		break;
 	case '1':
 		$canditateNameValue = $_POST["Donald Trump"];
