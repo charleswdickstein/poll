@@ -51,7 +51,7 @@ error_reporting(E_ALL);
 }
 
 	// Calculate Results 
-	//$totalVotes = $clintonCount.$trumpCount.$sandersCount.$cruzCount;
+	$totalVotes = $clintonCount + $trumpCount + $sandersCount + $cruzCount;
 
 
 	echo "Votes: ";
