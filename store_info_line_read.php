@@ -21,7 +21,7 @@ error_reporting(E_ALL);
 
 <?php
 	
-	$fp = fopen("myinfo.txt", "r");
+	$fp = fopen("myinfo.csv", "r");
 	
 	$readname = fgets($fp);	
 	$readage = fgets($fp);

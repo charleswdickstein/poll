@@ -20,7 +20,7 @@ error_reporting(E_ALL);
 
 
 <?php
-	$thefile = file('myinfo.txt');
+	$thefile = file('myinfo.csv');
 	print "<p>";
 	
 	for ($line=0; $line<count($thefile); $line++) {
