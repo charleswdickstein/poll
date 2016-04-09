@@ -54,9 +54,9 @@ $theweight = $_POST['yourweight']."\n";
 <?php
 	$myfile = fopen('myinfo.txt', 'w');
 	
-	fwrite($myfile, $thename);
-	fwrite($myfile, $theage);
-	fwrite($myfile, $theweight);
+	fwrite($myfile, $thename."\n");
+	fwrite($myfile, $theage."\n");
+	fwrite($myfile, $theweight."\n");
 	
 	fclose($myfile);
 	print "File written with this data: ";
