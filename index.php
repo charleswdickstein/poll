@@ -55,8 +55,8 @@ $theValues = array($thename, $theage, $theweight);
 <?php
 	$myfile = fopen('myinfo.csv', 'a');
 	
-	fputcsv($myfile, $line);
-	fwrite($myfile, $theValues);
+	fputcsv($myfile, $theValues);
+	//fwrite($myfile, $theValues);
 	// fwrite($myfile, $theage);
 	// fwrite($myfile, $theweight);
 	
