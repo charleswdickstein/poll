@@ -32,7 +32,7 @@ error_reporting(E_ALL);
 		for ($key = 0; $key < count($line); $key++){
 
 		
-		echo "This is the print statement".$thefile[1][$key];
+		echo "This is the print statement".$thefile[$line][$key];
 		if ($thefile[$line][$key] == 0){
 			$clintonCount++;
 		}
