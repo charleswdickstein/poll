@@ -47,10 +47,10 @@ error_reporting(E_ALL);
 		print trim($thefile[$line])."<br />\n";
 	}
 	
-	echo "Clinton: ".$clintonCount;
-	echo "Trump: ".$trumpCount;
-	echo "Sanders: ".$sandersCount;
-	echo "Cruz:  ".$cruzCount;
+	echo "Clinton: ".$clintonCount."\n";
+	echo "Trump: ".$trumpCount."\n";
+	echo "Sanders: ".$sandersCount."\n";
+	echo "Cruz:  ".$cruzCount."\n";
 
 
 	
