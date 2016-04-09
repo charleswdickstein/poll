@@ -42,7 +42,7 @@ error_reporting(E_ALL);
 <h1>Hello, <?php echo $_POST['yourname']; ?>! </h1>
 <?php
 $voteValue = $_POST['yourvote']."\n";
-$canditateNameValue = $_POST['yourvote']."\n"
+$canditateNameValue = "Candidate"."\n"
 $theDecision = array($voteValue, $canditateNameValue);
 // $trump = $_POST['yourvote']."\n";
 // $sanders = $_POST['yourvote']."\n";
