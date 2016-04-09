@@ -62,7 +62,7 @@ $theValues = array($thename, $theage, $theweight);
 	
 	fclose($myfile);
 	print "File written with this data: ";
-	print array($thename, $theage, $theweight));
+	print $theValues;
 
 ?>
 
