@@ -16,7 +16,7 @@ error_reporting(E_ALL);
 </ul>
 	<h1>Form to save your name, age, and weight </h2>
 
-<form action="http://i6.cims.nyu.edu/~nh2/april7_2016/store_info.php"
+<form action="https://aqueous-tundra-58634.herokuapp.com/index.php"
        method="post">
        
 <h2>Enter your full name: <br>
