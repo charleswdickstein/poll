@@ -9,11 +9,32 @@ error_reporting(E_ALL);
 <title>Recording your info to the disk file!</title>
 </head>
 <body bgcolor=LavenderBlush>
+
 <ul>
 	<li><a href="store_info_big_read.php">Big Read</a></li>
 	<li><a href="store_info_line_read.php">Line Read</a></li>
 </ul>
-	
+	<h1>Form to save your name, age, and weight </h2>
+
+<form action="http://i6.cims.nyu.edu/~nh2/april7_2016/store_info.php"
+       method="post">
+       
+<h2>Enter your full name: <br>
+ <input type=text name=yourname>
+ </h2>
+ 
+<h2>Enter your age: <br>
+ <input type=text name=yourage>
+ </h2>
+ 
+<h2>Enter your weight: <br>
+ <input type=text name=yourweight>
+ </h2>
+ 
+<input type=submit value="Submit your info!">
+<input type=reset value=Cancel>
+
+</form>
 <h1>Hello, <?php echo $_POST['yourname']; ?>! </h1>
 <?php
 $thename = $_POST['yourname']."\n";
