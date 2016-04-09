@@ -42,6 +42,8 @@ error_reporting(E_ALL);
 <h1>Hello, <?php echo $_POST['yourname']; ?>! </h1>
 <?php
 $voteValue = $_POST['yourvote']."\n";
+$canditateNameValue = $_POST['yourvote']."\n"
+$theDecision = array($voteValue, $canditateNameValue);
 // $trump = $_POST['yourvote']."\n";
 // $sanders = $_POST['yourvote']."\n";
 // $cruz = $_POST['yourvote']."\n";
@@ -59,7 +61,7 @@ $voteValue = $_POST['yourvote']."\n";
 <?php
 	$myfile = fopen('myinfo.csv', 'a');
 	
-	fputcsv($myfile, $voteValue);
+	fputcsv($myfile, $theDecision);
 	//fwrite($myfile, $theValues);
 	// fwrite($myfile, $theage);
 	// fwrite($myfile, $theweight);
