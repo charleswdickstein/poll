@@ -30,6 +30,7 @@ error_reporting(E_ALL);
 	
 	for ($line=0; $line<count($thefile); $line++) {
 		if ($thefile[$line] == 0){
+			echo $thefile[$line];
 			$clintonCount++;
 		}
 		else if ($thefile[$line] == 1){
