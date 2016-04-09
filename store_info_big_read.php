@@ -54,11 +54,11 @@ error_reporting(E_ALL);
 	//$totalVotes = $clintonCount.$trumpCount.$sandersCount.$cruzCount;
 
 
-	echo "Votes: ".$totalVotes;
-	echo "Clinton: ".$clintonCount;
-	echo "Trump: ".$trumpCount;
-	echo "Sanders: ".$sandersCount;
-	echo "Cruz:  ".$cruzCount;
+	echo "Votes: ";
+	echo " Clinton: ".$clintonCount;
+	echo " Trump: ".$trumpCount;
+	echo " Sanders: ".$sandersCount;
+	echo " Cruz:  ".$cruzCount;
 
 
 	
