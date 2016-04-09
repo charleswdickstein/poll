@@ -17,7 +17,7 @@ error_reporting(E_ALL);
 </ul>
 	<h1>Form to save your name, age, and weight </h2>
 
-<form action="https://aqueous-tundra-58634.herokuapp.com/index.php"
+<form action="https://aqueous-tundra-58634.herokuapp.com"
        method="post">
        
 <h2>Enter your full name: <br>
@@ -52,11 +52,11 @@ $theweight = $_POST['yourweight']."\n";
 
 </ul>
 <?php
-	$myfile = fopen('myinfo.txt', 'w');
+	$myfile = fopen('myinfo.txt', 'a');
 	
-	fwrite($myfile, $thename."\n");
-	fwrite($myfile, $theage."\n");
-	fwrite($myfile, $theweight."\n");
+	fwrite($myfile, $thename);
+	fwrite($myfile, $theage);
+	fwrite($myfile, $theweight);
 	
 	fclose($myfile);
 	print "File written with this data: ";
