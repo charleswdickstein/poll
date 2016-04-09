@@ -46,7 +46,7 @@ error_reporting(E_ALL);
 		}
 		print trim($thefile[$line])."<br />\n";
 	}
-	
+	echo "Votes: "
 	echo "Clinton: ".$clintonCount."\n";
 	echo "Trump: ".$trumpCount."\n";
 	echo "Sanders: ".$sandersCount."\n";
