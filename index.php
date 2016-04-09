@@ -77,7 +77,7 @@ $theDecision = array($canditateNameValue,$voteValue);
 <h2>Your Complete Info:</h2>
 
 <ul>
-	<li><h3>Your vote: <?php echo $theDecision; ?> </li>
+	<li><h3>Your vote: <?php print $theDecision; ?> </li>
 <!-- 	<li><h3>Your age: <?php echo $theage; ?> </li>
 	<li><h3>Your weight: <?php echo $theweight; ?> </li> -->
 
