@@ -53,7 +53,7 @@ error_reporting(E_ALL);
 		alert("must enter name");
 		return false;
 	}
-	else if (document.getElementById("yourname").match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)){
+	else if (!document.getElementById("yourname").match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)){
 	 	alert("invalid");
 	 	return false;
 	}
