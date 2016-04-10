@@ -30,7 +30,7 @@ error_reporting(E_ALL);
 	
 	for ($line=0; $line<count($thefile); $line++) {
 		for ($key = 0; $key < count($thefile); $key++){
-			echo $thefile[$line][0];
+			echo $thefile[$line];
 		
 		//echo "This is the print statement".$thefile[$line];
 		// if ($thefile[$line][0] == 1){
