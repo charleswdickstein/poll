@@ -109,7 +109,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 
 </ul>
 <?php
-	$myfile = fopen('myinfo.csv', 'a');
+	$myfile = fopen('myinfo.csv', 'r');
 	$hasVoted = -1;
 	while ($row= fgetcsv($myfile, 1024, ",")){
 	
@@ -119,7 +119,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 			$value = $row[$m];
 			if ($value == $nameValue){
 				$hasVoted = 0;
-				print "Found a value";
+				
 			}
 }
 // print "This is hasVoted ".$hasVoted;
