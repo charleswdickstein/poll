@@ -136,7 +136,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	
 
 
-?>
+
 
 </body>
 </html>

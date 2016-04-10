@@ -34,7 +34,7 @@ error_reporting(E_ALL);
 <input type="hidden" name="yourcruzvote" value="Ted Cruz">
 <input type="hidden" name="yourbloombergvote" value="Michael Bloomberg">     
 <h2>Enter your full name: <br>
- <input type="text" name="yourname">
+ <input type="text" name="yourname" required>
  </h2>
  
 <!-- <h2>Enter your age: <br>
