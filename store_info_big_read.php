@@ -29,22 +29,22 @@ error_reporting(E_ALL);
 	print "<p>";
 	
 	for ($line=0; $line<count($thefile); $line++) {
-		for ($key = 0; $key < count($line); $key++){
-			echo $line[$key];
+		for ($key = 0; $key < count($thefile); $key++){
+			echo $thefile[$key];
 		
-		echo "This is the print statement".$line[$key];
-		if ($line[$key] == 1){
-			$clintonCount++;
-		}
-		else if ($line[$key] == 2){
-			$trumpCount++;
-		}
-		else if ($line[$key] == 3){
-			$sandersCount++;
-		}
-		else if ($line[$key] == 4){
-			$cruzCount++;
-		}
+	// 	echo "This is the print statement".$thefile[$line];
+	// 	if ($thefile[0][$key] == 1){
+	// 		$clintonCount++;
+	// 	}
+	// 	else if ($thefile[0][$key] == 2){
+	// 		$trumpCount++;
+	// 	}
+	// 	else if ($thefile[0][$key] == 3){
+	// 		$sandersCount++;
+	// 	}
+	// 	else if ($thefile[0][$key] == 4){
+	// 		$cruzCount++;
+	// 	}
 		
 	// 	//print trim($thefile[$line])."<br />\n";
 	 }
