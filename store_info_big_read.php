@@ -28,7 +28,11 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	//print("<tr><td>Year</td><td>Jan</td><td>Feb</td><td>Mar</td><td>Apr</td><td>May</td><td>Jun</td>".
 	     //  "<td>Jul</td><td>Aug</td><td>Sep</td><td>Oct</td><td>Nov</td><td>Dec</td></tr>\n");
 	       
-	
+	$clintonCount = 0;
+	$trumpCount = 0;
+	$sandersCount = 0;
+	$cruzCount = 0;
+
 	while ($row= fgetcsv($fp, 1024, ",")){
 	
 		$columns = count($row);
@@ -36,10 +40,24 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 		for ($m=0; $m<$columns; $m++) {
 			$value = $row[$m];
 			
-			if ($value > 200.0)
-			   print("<td> N/A </td>\n");
-			else
-			    print("<td>".$value."</td>\n");
+			switch ($value){
+				case 1:
+					$clintonCount++;
+					break;
+
+				case 2:
+					$trumpCount++;
+					break;
+
+				case 3:
+					$sandersCount++;
+					break;
+
+				case 4:
+					$cruzCount++;
+					break;
+			}
+			print("<td>".$value."</td>\n");
 			
 		
 		}  // end for $m
@@ -51,6 +69,15 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	print("<tr>\n");
 	
 	fclose($fp) or die("can't close the file");
+
+	$totalVotes = $clintonCount + $trumpCount + $sandersCount + $cruzCount;
+
+
+	echo "Votes: ".$totalVotes;
+	echo " Clinton: ".$clintonCount;
+	echo " Trump: ".$trumpCount;
+	echo " Sanders: ".$sandersCount;
+	echo " Cruz:  ".$cruzCount;
 
 ?>
 
