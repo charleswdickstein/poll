@@ -109,7 +109,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 
 </ul>
 <?php
-	$myfile = fopen('myinfo.csv', 'r');
+	$myfile = fopen('myinfo.csv', 'a');
 	$hasVoted = -1;
 	while ($row= fgetcsv($myfile, 1024, ",")){
 	
@@ -134,7 +134,8 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 	// fwrite($myfile, $theweight);
 	
 	fclose($myfile);
-	print "this is nameVale ".$nameValue;
+	print "this is nameValue ".$nameValue;
+	print "this is $value ".$value;
 	print "This is hasVoted ".$hasVoted;
 	print "File written with this data: ";
 	print $voteValue;
