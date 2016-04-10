@@ -27,11 +27,11 @@ while ($row= fgetcsv($fp, 1024, ",")){
 		$columns = count($row);
 		print("<tr>\n");
 		for ($m=0; $m<$columns; $m++) {
-			$value = floatval($row[$m]);
+			$value = $row[$m];
 			
-			if ($value > 200.0)
-			   print("<td> N/A </td>\n");
-			else
+			// if ($value > 200.0)
+			//    print("<td> N/A </td>\n");
+			// else
 			    print("<td>".$value."</td>\n");
 			
 		
