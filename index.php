@@ -121,11 +121,12 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 				$hasVoted = 0;
 			}
 }
+print "This is hasVoted ".$hasVoted;
 // if ($hasVoted = -1){
 // 	fputcsv($myfile, $theDecision);
 // }
 }
-print "This is hasVoted ".$hasVoted;
+
 	
 
 	//fwrite($myfile, $theValues);
