@@ -33,16 +33,16 @@ error_reporting(E_ALL);
 
 		
 		echo "This is the print statement".$thefile[$line];
-		if ($thefile[$line] == '0'){
+		if ($thefile[$line] == 0){
 			$clintonCount++;
 		}
-		else if ($thefile[$line] == '1'){
+		else if ($thefile[$line] == 1){
 			$trumpCount++;
 		}
-		else if ($thefile[$line] == '2'){
+		else if ($thefile[$line] == 2){
 			$sandersCount++;
 		}
-		else if ($thefile[$line] == '3'){
+		else if ($thefile[$line] == 3){
 			$cruzCount++;
 		}
 		
