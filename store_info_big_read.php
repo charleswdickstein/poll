@@ -30,21 +30,21 @@ error_reporting(E_ALL);
 	
 	for ($line=0; $line<count($thefile); $line++) {
 		for ($key = 0; $key < count($thefile); $key++){
-			//echo $thefile[$line][$key];
+			echo $thefile[$line][0];
 		
 		//echo "This is the print statement".$thefile[$line];
-		if ($thefile[$line][0] == 1){
-			$clintonCount++;
-		}
-		else if ($thefile[$line][0] == 2){
-			$trumpCount++;
-		}
-		else if ($thefile[$line][0] == 3){
-			$sandersCount++;
-		}
-		else if ($thefile[$line][0] == 4){
-			$cruzCount++;
-		}
+		// if ($thefile[$line][0] == 1){
+		// 	$clintonCount++;
+		// }
+		// else if ($thefile[$line][0] == 2){
+		// 	$trumpCount++;
+		// }
+		// else if ($thefile[$line][0] == 3){
+		// 	$sandersCount++;
+		// }
+		// else if ($thefile[$line][0] == 4){
+		// 	$cruzCount++;
+		// }
 		
 		//print trim($thefile[$line])."<br />\n";
 	 }
