@@ -121,7 +121,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 				hasVoted = true;
 				
 			}
-
+}
 	if (hasVoted = false){
 	fputcsv($myfile, $theDecision);
 }
