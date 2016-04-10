@@ -50,11 +50,11 @@ error_reporting(E_ALL);
 	var name = document.getElementById("yourname");
 	var pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 	if (name.value == ""){
-		alert("must enter name");
+		alert("must enter email");
 		return false;
 	}
 	else if (pattern.test(name.value) == false){
-	 	alert("invalid");
+	 	alert("Invalid email address");
 	 	return false;
 	}
 	
@@ -109,16 +109,58 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 
 </ul>
 <?php
-	$myfile = fopen('myinfo.csv', 'a');
+	//$myfile = fopen('myinfo.csv', 'a');
 	
+	$fp = fopen('myinfo.csv',"r") or die("can't open the file!");
+	
+	//print("<table border='1' cellspacing='2' cellpadding='2'>\n");
+	
+	//print("<tr><td>Year</td><td>Jan</td><td>Feb</td><td>Mar</td><td>Apr</td><td>May</td><td>Jun</td>".
+	     //  "<td>Jul</td><td>Aug</td><td>Sep</td><td>Oct</td><td>Nov</td><td>Dec</td></tr>\n");
+	       
+	$clintonCount = 0;
+	$trumpCount = 0;
+	$sandersCount = 0;
+	$cruzCount = 0;
+	$hasVoted = false;
+	while ($row= fgetcsv($fp, 1024, ",")){
+	
+		$columns = count($row);
+		print("<tr>\n");
+		for ($m=0; $m<$columns; $m++) {
+			$value = $row[$m];
+			
+			if ($value == $nameValue){
+				$hasVoted = true;
+			}
+			}
+			print("<td>".$value."</td>\n");
+			
+		
+		}  // end for $m
+		print("</tr>\n");
+	
+	
+	} // end while $row
+
+	print("<tr>\n");
+	
+	fclose($fp) or die("can't close the file");
+	if ($hasVoted == false){
 	fputcsv($myfile, $theDecision);
+	print "File written with this data: ";
+	print $voteValue;
+}
+	else{
+		print "already voted";
+	}
 	//fwrite($myfile, $theValues);
 	// fwrite($myfile, $theage);
 	// fwrite($myfile, $theweight);
 	
 	fclose($myfile);
-	print "File written with this data: ";
-	print $voteValue;
+	// print "File written with this data: ";
+	// print $voteValue;
 
 ?>
 
