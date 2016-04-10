@@ -122,6 +122,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 				
 			}
 }
+}
 	if ($hasVoted = false){
 	fputcsv($myfile, $theDecision);
 }
