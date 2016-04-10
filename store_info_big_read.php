@@ -27,7 +27,7 @@ while ($row= fgetcsv($fp, 1024, ",")){
 		$columns = count($row);
 		print("<tr>\n");
 		for ($m=0; $m<$columns; $m++) {
-			$value = $row[$m];
+			$value = $row[1];
 			
 			// if ($value > 200.0)
 			//    print("<td> N/A </td>\n");
