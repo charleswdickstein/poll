@@ -110,7 +110,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 </ul>
 <?php
 	$myfile = fopen('myinfo.csv', 'a+');
-	hasVoted = false;
+	$hasVoted = false;
 	while ($row= fgetcsv($myfile, 1024, ",")){
 	
 		$columns = count($row);
@@ -118,11 +118,11 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 		for ($m=0; $m<$columns; $m++) {
 			$value = $row[$m];
 			if ($value == $nameValue){
-				hasVoted = true;
+				$hasVoted = true;
 				
 			}
 }
-	if (hasVoted = false){
+	if ($hasVoted = false){
 	fputcsv($myfile, $theDecision);
 }
 	//fwrite($myfile, $theValues);
