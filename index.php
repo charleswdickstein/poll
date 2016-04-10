@@ -50,6 +50,13 @@ error_reporting(E_ALL);
 		alert("must enter name");
 		return false;
 	}
+	else if (document.getElementById("yourname").match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)){
+		return true;
+		else{
+			alert("invalid email");
+			return false;
+		}
+	}
 	else if(document.getElementById("yourvote").value == ""){
 		alert("must enter vote");
 		return false;
