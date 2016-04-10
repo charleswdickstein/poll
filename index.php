@@ -19,18 +19,18 @@ error_reporting(E_ALL);
 
 <form action="https://aqueous-tundra-58634.herokuapp.com"
        method="post">
-<input type="radio" name="yourvote" value="0">Hilary Clinton<br>
+<input type="radio" name="yourvote" value="1">Hilary Clinton<br>
 <input type="hidden" name="yourclintonvote" value="Hilary Clinton">
 
-<input type="radio" name="yourvote" value="1">Donald Trump<br>
+<input type="radio" name="yourvote" value="2">Donald Trump<br>
 <input type="hidden" name="yourtrumpvote" value="Donald Trump">
 
 
-<input type="radio" name="yourvote" value="2">Bernie Sanders<br>
+<input type="radio" name="yourvote" value="3">Bernie Sanders<br>
 <input type="hidden" name="yoursandersvote" value="Bernie Sanders">
 
 
-<input type="radio" name="yourvote" value="3">Ted Cruz<br>
+<input type="radio" name="yourvote" value="4">Ted Cruz<br>
 <input type="hidden" name="yourcruzvote" value="Ted Cruz">
 <input type="hidden" name="yourbloombergvote" value="Michael Bloomberg">     
 <!-- <h2>Enter your full name: <br>
@@ -55,16 +55,16 @@ $canditateNameValue = "";
 $voteValue = $_POST['yourvote'];
 
 switch ($voteValue){
-	case '0':
+	case '1':
 		$canditateNameValue = $_POST['yourclintonvote'];
 		break;
-	case '1':
+	case '2':
 		$canditateNameValue = $_POST['yourtrumpvote'];
 		break;
-	case '2':
+	case '3':
 		$canditateNameValue = $_POST['yoursandersvote'];
 		break;
-	case '3':
+	case '4':
 		$canditateNameValue = $_POST['yourcruzvote'];
 		break;
 	default:
