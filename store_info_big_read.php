@@ -21,7 +21,7 @@ error_reporting(E_ALL);
 
 <?php
 
-$fp = file('myinfo.csv');
+$fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 while ($row= fgetcsv($fp, 1024, ",")){
 	
 		$columns = count($row);
