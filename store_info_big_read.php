@@ -20,46 +20,80 @@ error_reporting(E_ALL);
 
 
 <?php
-	$thefile = file('myinfo.csv');
-	$clintonCount = 0;
-	$trumpCount = 0;
-	$sandersCount = 0;
-	$cruzCount = 0;
-	$bloombergCount = 0;
-	print "<p>";
+
+$fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	
-	for ($line=0; $line<count($thefile); $line++) {
-		for ($key = 0; $key < count($thefile); $key++){
-			echo $thefile[$line];
+	print("<table border='1' cellspacing='2' cellpadding='2'>\n");
+	
+	//print("<tr><td>Year</td><td>Jan</td><td>Feb</td><td>Mar</td><td>Apr</td><td>May</td><td>Jun</td>".
+	     //  "<td>Jul</td><td>Aug</td><td>Sep</td><td>Oct</td><td>Nov</td><td>Dec</td></tr>\n");
+	       
+	
+	while ($row= fgetcsv($fp, 1024, ",")){
+	
+		$columns = count($row);
+		print("<tr>\n");
+		for ($m=0; $m<$columns; $m++) {
+			$value = $row[$m];
+			
+			if ($value > 200.0)
+			   print("<td> N/A </td>\n");
+			else
+			    print("<td>".$value."</td>\n");
+			
 		
-		//echo "This is the print statement".$thefile[$line];
-		// if ($thefile[$line][0] == 1){
-		// 	$clintonCount++;
-		// }
-		// else if ($thefile[$line][0] == 2){
-		// 	$trumpCount++;
-		// }
-		// else if ($thefile[$line][0] == 3){
-		// 	$sandersCount++;
-		// }
-		// else if ($thefile[$line][0] == 4){
-		// 	$cruzCount++;
-		// }
+		}  // end for $m
+		print("</tr>\n");
+	
+	
+	} // end while $row
+
+	print("<tr>\n");
+	
+	fclose($fp) or die("can't close the file");
+
+?>
+
+<!-- // 	$thefile = file('myinfo.csv');
+// 	$clintonCount = 0;
+// 	$trumpCount = 0;
+// 	$sandersCount = 0;
+// 	$cruzCount = 0;
+// 	$bloombergCount = 0;
+// 	print "<p>";
+	
+// 	for ($line=0; $line<count($thefile); $line++) {
+// 		for ($key = 0; $key < count($thefile); $key++){
+// 			echo $thefile[$line];
 		
-		//print trim($thefile[$line])."<br />\n";
-	 }
-}
+// 		//echo "This is the print statement".$thefile[$line];
+// 		// if ($thefile[$line][0] == 1){
+// 		// 	$clintonCount++;
+// 		// }
+// 		// else if ($thefile[$line][0] == 2){
+// 		// 	$trumpCount++;
+// 		// }
+// 		// else if ($thefile[$line][0] == 3){
+// 		// 	$sandersCount++;
+// 		// }
+// 		// else if ($thefile[$line][0] == 4){
+// 		// 	$cruzCount++;
+// 		// }
+		
+// 		//print trim($thefile[$line])."<br />\n";
+// 	 }
+// }
 
 
-	// Calculate Results 
-	$totalVotes = $clintonCount + $trumpCount + $sandersCount + $cruzCount;
+// 	// Calculate Results 
+// 	$totalVotes = $clintonCount + $trumpCount + $sandersCount + $cruzCount;
 
 
-	echo "Votes: ".$totalVotes;
-	echo " Clinton: ".$clintonCount;
-	echo " Trump: ".$trumpCount;
-	echo " Sanders: ".$sandersCount;
-	echo " Cruz:  ".$cruzCount;
+// 	echo "Votes: ".$totalVotes;
+// 	echo " Clinton: ".$clintonCount;
+// 	echo " Trump: ".$trumpCount;
+// 	echo " Sanders: ".$sandersCount;
+// 	echo " Cruz:  ".$cruzCount;
 
 
 	
@@ -68,10 +102,10 @@ error_reporting(E_ALL);
 
 
 	
-	print "</p>\n";
+// 	print "</p>\n";
 	
-	print "YOUR data read back in!\n";
-	
+// 	print "YOUR data read back in!\n";
+	 -->
 	
 
 
