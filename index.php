@@ -55,16 +55,16 @@ $canditateNameValue = "";
 $voteValue = $_POST['yourvote'];
 
 switch ($voteValue){
-	case '1':
+	case '0':
 		$canditateNameValue = $_POST['yourclintonvote'];
 		break;
-	case '2':
+	case '1':
 		$canditateNameValue = $_POST['yourtrumpvote'];
 		break;
-	case '3':
+	case '2':
 		$canditateNameValue = $_POST['yoursandersvote'];
 		break;
-	case '4':
+	case '3':
 		$canditateNameValue = $_POST['yourcruzvote'];
 		break;
 	default:
