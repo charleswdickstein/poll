@@ -134,7 +134,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 	// fwrite($myfile, $theweight);
 	
 	fclose($myfile);
-	print "this is nameVale ".$nameValue
+	print "this is nameVale ".$nameValue;
 	print "This is hasVoted ".$hasVoted;
 	print "File written with this data: ";
 	print $voteValue;
