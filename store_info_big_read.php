@@ -29,26 +29,26 @@ error_reporting(E_ALL);
 	print "<p>";
 	
 	for ($line=0; $line<count($thefile); $line++) {
-		for ($key = 0; $key < count($line); $key++){
+		// for ($key = 0; $key < count($line); $key++){
 
 		
-		echo "This is the print statement".$thefile[$line][$key];
-		if ($thefile[$line][$key] == 0){
+		echo "This is the print statement".$thefile[$line];
+		if ($thefile[$line] == 0){
 			$clintonCount++;
 		}
-		else if ($thefile[$line][$key] == 1){
+		else if ($thefile[$line] == 1){
 			$trumpCount++;
 		}
-		else if ($thefile[$line][$key] == 2){
+		else if ($thefile[$line] == 2){
 			$sandersCount++;
 		}
-		else if ($thefile[$line][$key] == 3){
+		else if ($thefile[$line] == 3){
 			$cruzCount++;
 		}
 		
 		//print trim($thefile[$line])."<br />\n";
 	}
-}
+
 
 	// Calculate Results 
 	$totalVotes = $clintonCount + $trumpCount + $sandersCount + $cruzCount;
