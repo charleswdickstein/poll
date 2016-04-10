@@ -21,7 +21,7 @@ error_reporting(E_ALL);
 
 <?php
 
-$fp = file('myinfo.txt');
+$fp = file('myinfo.csv');
 while ($row= fgetcsv($fp, 1024, ",")){
 	
 		$columns = count($row);
