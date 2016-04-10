@@ -145,7 +145,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 
 	//print("<tr>\n");
 	
-	fclose($fp) or die("can't close the file");
+	//fclose($fp) or die("can't close the file");
 	if ($hasVoted == false){
 	fputcsv($myfile, $theDecision);
 	print "File written with this data: ";
@@ -158,7 +158,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 	// fwrite($myfile, $theage);
 	// fwrite($myfile, $theweight);
 	
-	fclose($myfile);
+	fclose($fp);
 	// print "File written with this data: ";
 	// print $voteValue;
 
