@@ -121,7 +121,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 				$hasVoted = 0;
 			}
 }
-print "This is hasVoted ".$hasVoted;
+// print "This is hasVoted ".$hasVoted;
 // if ($hasVoted = -1){
 // 	fputcsv($myfile, $theDecision);
 // }
@@ -134,6 +134,7 @@ print "This is hasVoted ".$hasVoted;
 	// fwrite($myfile, $theweight);
 	
 	fclose($myfile);
+	print "This is hasVoted ".$hasVoted;
 	print "File written with this data: ";
 	print $voteValue;
 
