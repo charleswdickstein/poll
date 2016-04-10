@@ -50,10 +50,10 @@ error_reporting(E_ALL);
 		alert("must enter name");
 		return false;
 	}
-	else if (document.getElementById("yourname").!match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)){
-		alert("invalid name");
-		return false;
-	}
+	// else if (document.getElementById("yourname").!match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)){
+	// 	alert("invalid name");
+	// 	return false;
+	// }
 	
 	return true;
 }
