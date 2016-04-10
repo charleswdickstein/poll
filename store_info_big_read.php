@@ -29,20 +29,20 @@ error_reporting(E_ALL);
 	print "<p>";
 	
 	for ($line=0; $line<count($thefile); $line++) {
-		// for ($key = 0; $key < count($line); $key++){
+		for ($key = 0; $key < count($thefile); $key++){
 
 		
 		echo "This is the print statement".$thefile[$line];
-		if ($thefile[$line] == 1){
+		if ($thefile[0][$key] == 1){
 			$clintonCount++;
 		}
-		else if ($thefile[$line] == 2){
+		else if ($thefile[0][$key] == 2){
 			$trumpCount++;
 		}
-		else if ($thefile[$line] == 3){
+		else if ($thefile[0][$key] == 3){
 			$sandersCount++;
 		}
-		else if ($thefile[$line] == 4){
+		else if ($thefile[0][$key] == 4){
 			$cruzCount++;
 		}
 		
