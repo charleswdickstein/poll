@@ -45,14 +45,15 @@ error_reporting(E_ALL);
  <input type=text name=yourweight>
  </h2> -->
 <script type="text/javascript">
+	
+	function checkform(){
 	var name = document.getElementById("yourname");
 	var pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-	function checkform(){
 	if (document.getElementById("yourname").value == ""){
 		alert("must enter name");
 		return false;
 	}
-	 else if (!name.match(pattern)){
+	else if (!name.match(pattern)){
 	 	alert("invalid");
 	 	return false;
 	}
