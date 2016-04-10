@@ -46,13 +46,14 @@ error_reporting(E_ALL);
  </h2> -->
 <script type="text/javascript">
 	var name = document.getElementById("yourname");
+	var pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 	function checkform(){
 	if (document.getElementById("yourname").value == ""){
 		alert("must enter name");
 		return false;
 	}
-	 else if (!name.match(/\A([^@\s]+)@((?:[-nyu]+\.)edu)\z/)){
-	 	alert("invalid name");
+	 else if (!name.match(pattern)){
+	 	alert("invalid")
 	 	return false;
 	}
 	
