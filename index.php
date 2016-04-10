@@ -18,7 +18,7 @@ error_reporting(E_ALL);
 	<h1>Form to save your name, age, and weight </h2>
 
 <form action="https://aqueous-tundra-58634.herokuapp.com"
-       method="post">
+       method="post" onSubmit="return checkform()">
 <input type="radio" name="yourvote" value="1">Hilary Clinton<br>
 <input type="hidden" name="yourclintonvote" value="Hilary Clinton">
 
@@ -34,7 +34,7 @@ error_reporting(E_ALL);
 <input type="hidden" name="yourcruzvote" value="Ted Cruz">
 <input type="hidden" name="yourbloombergvote" value="Michael Bloomberg">     
 <h2>Enter your full name: <br>
- <input type="text" name="yourname" required>
+ <input id="yourname" type="text" name="yourname">
  </h2>
  
 <!-- <h2>Enter your age: <br>
@@ -44,7 +44,16 @@ error_reporting(E_ALL);
 <h2>Enter your weight: <br>
  <input type=text name=yourweight>
  </h2> -->
- 
+<script type="text/javascript">
+	function checkform(){
+	if (document.getElementById("yourname").value == ""){
+		alert("must enter value");
+		return false;
+	}
+	return true;
+}
+	
+</script> 
 <input type=submit value="Submit your info!">
 <input type=reset value=Cancel>
 
