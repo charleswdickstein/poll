@@ -119,6 +119,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 			$value = $row[$m];
 			if ($value == $nameValue){
 				$hasVoted = 0;
+				print "Found a value";
 			}
 }
 // print "This is hasVoted ".$hasVoted;
@@ -135,7 +136,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 	
 	fclose($myfile);
 	print "this is nameValue ".$nameValue;
-	print "this is $value ".$value;
+	//print "this is $value ".$value;
 	print "This is hasVoted ".$hasVoted;
 	print "File written with this data: ";
 	print $voteValue;
