@@ -47,7 +47,11 @@ error_reporting(E_ALL);
 <script type="text/javascript">
 	function checkform(){
 	if (document.getElementById("yourname").value == ""){
-		alert("must enter value");
+		alert("must enter name");
+		return false;
+	}
+	else if(document.getElementById("yourvote").value == ""){
+		alert("must enter vote");
 		return false;
 	}
 	return true;
