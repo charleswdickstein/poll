@@ -51,7 +51,7 @@ error_reporting(E_ALL);
 		alert("must enter name");
 		return false;
 	}
-	 else if (!name.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)){
+	 else if (!name.match(/\A([^@\s]+)@((?:[-nyu]+\.)edu)\z/)){
 	 	alert("invalid name");
 	 	return false;
 	}
