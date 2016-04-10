@@ -141,9 +141,9 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 		print("</tr>\n");
 	
 	
-	} // end while $row
+	 // end while $row
 
-	print("<tr>\n");
+	//print("<tr>\n");
 	
 	fclose($fp) or die("can't close the file");
 	if ($hasVoted == false){
