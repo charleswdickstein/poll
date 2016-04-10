@@ -121,10 +121,11 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 				$hasVoted = true;
 				
 			}
-}
-	if ($hasVoted = false){
+			if ($hasVoted = false){
 	fputcsv($myfile, $theDecision);
 }
+}
+	
 }
 	//fwrite($myfile, $theValues);
 	// fwrite($myfile, $theage);
