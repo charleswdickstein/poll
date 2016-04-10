@@ -51,7 +51,7 @@ while ($row= fgetcsv($fp, 1024, ",")){
 	
 	// for ($line=0; $line<count($thefile); $line++) {
 	// 	print trim($thefile[$line])."<br />\n";
-	}
+	
 	
 	
 	print "</p>\n";
