@@ -109,41 +109,9 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 
 </ul>
 <?php
-	//$myfile = fopen('myinfo.csv', 'a');
-	
-	$fp = fopen('myinfo.csv',"r") or die("can't open the file!");
-	
-	//print("<table border='1' cellspacing='2' cellpadding='2'>\n");
-	
-	//print("<tr><td>Year</td><td>Jan</td><td>Feb</td><td>Mar</td><td>Apr</td><td>May</td><td>Jun</td>".
-	     //  "<td>Jul</td><td>Aug</td><td>Sep</td><td>Oct</td><td>Nov</td><td>Dec</td></tr>\n");
-	       
-	$clintonCount = 0;
-	$trumpCount = 0;
-	$sandersCount = 0;
-	$cruzCount = 0;
-
-	while ($row= fgetcsv($fp, 1024, ",")){
-	
-		$columns = count($row);
-		print("<tr>\n");
-		for ($m=0; $m<$columns; $m++) {
-			$value = $row[$m];
-			
-			
-			}
-			print("<td>".$value."</td>\n");
-			
-		
-		}  // end for $m
-		print("</tr>\n");
+	$myfile = fopen('myinfo.csv', 'a');
 	
 	
-	} // end while $row
-
-	print("<tr>\n");
-	
-	fclose($fp) or die("can't close the file");
 
 	fputcsv($myfile, $theDecision);
 	//fwrite($myfile, $theValues);
