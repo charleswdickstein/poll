@@ -111,7 +111,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 <?php
 	//$myfile = fopen('myinfo.csv', 'a');
 	
-	$fp = fopen('myinfo.csv',"r") or die("can't open the file!");
+	$fp = fopen('myinfo.csv',"a") or die("can't open the file!");
 	
 	//print("<table border='1' cellspacing='2' cellpadding='2'>\n");
 	
