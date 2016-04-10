@@ -20,39 +20,53 @@ error_reporting(E_ALL);
 
 
 <?php
-
-$fp = fopen('myinfo.csv',"r") or die("can't open the file!");
-while ($row= fgetcsv($fp, 1024, ",")){
-	
-		$columns = count($row);
-		print("<tr>\n");
-		for ($m=0; $m<$columns; $m++) {
-			$value = $row[1];
-			
-			// if ($value > 200.0)
-			//    print("<td> N/A </td>\n");
-			// else
-			    print("<td>".$value."</td>\n");
-			
-		
-		}  // end for $m
-		print("</tr>\n");
-	
-	
-	} // end while $row
-
-	print("<tr>\n");
-	
-	fclose($fp) or die("can't close the file");
-
-
-	// $thefile = file('myinfo.txt');
+	$thefile = file('myinfo.csv');
+	$clintonCount = 0;
+	$trumpCount = 0;
+	$sandersCount = 0;
+	$cruzCount = 0;
+	$bloombergCount = 0;
 	print "<p>";
 	
-	// for ($line=0; $line<count($thefile); $line++) {
-	// 	print trim($thefile[$line])."<br />\n";
+	for ($line=0; $line<count($thefile); $line++) {
+		for ($key = 0; $key < count($line); $key++){
+			echo $line[$key];
+		
+	// 	echo "This is the print statement".$thefile[$line];
+	// 	if ($thefile[0][$key] == 1){
+	// 		$clintonCount++;
+	// 	}
+	// 	else if ($thefile[0][$key] == 2){
+	// 		$trumpCount++;
+	// 	}
+	// 	else if ($thefile[0][$key] == 3){
+	// 		$sandersCount++;
+	// 	}
+	// 	else if ($thefile[0][$key] == 4){
+	// 		$cruzCount++;
+	// 	}
+		
+	// 	//print trim($thefile[$line])."<br />\n";
+	 }
+}
+
+
+	// Calculate Results 
+	$totalVotes = $clintonCount + $trumpCount + $sandersCount + $cruzCount;
+
+
+	echo "Votes: ".$totalVotes;
+	echo " Clinton: ".$clintonCount;
+	echo " Trump: ".$trumpCount;
+	echo " Sanders: ".$sandersCount;
+	echo " Cruz:  ".$cruzCount;
+
+
 	
-	
+
+
+
+
 	
 	print "</p>\n";
 	
