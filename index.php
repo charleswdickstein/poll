@@ -49,11 +49,11 @@ error_reporting(E_ALL);
 	function checkform(){
 	var name = document.getElementById("yourname");
 	var pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-	if (document.getElementById("yourname").value == ""){
+	if (name.value == ""){
 		alert("must enter name");
 		return false;
 	}
-	else if (!document.getElementById("yourname").match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)){
+	else if (pattern.test(name.value) == false){
 	 	alert("invalid");
 	 	return false;
 	}
