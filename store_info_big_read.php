@@ -48,6 +48,7 @@ error_reporting(E_ALL);
 		
 		//print trim($thefile[$line])."<br />\n";
 	}
+}
 
 
 	// Calculate Results 
