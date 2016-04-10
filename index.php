@@ -33,11 +33,11 @@ error_reporting(E_ALL);
 <input type="radio" name="yourvote" value="4">Ted Cruz<br>
 <input type="hidden" name="yourcruzvote" value="Ted Cruz">
 <input type="hidden" name="yourbloombergvote" value="Michael Bloomberg">     
-<!-- <h2>Enter your full name: <br>
- <input type=text name=yourname>
+<h2>Enter your full name: <br>
+ <input type="text" name="yourname">
  </h2>
  
-<h2>Enter your age: <br>
+<!-- <h2>Enter your age: <br>
  <input type=text name=yourage>
  </h2>
  
@@ -53,6 +53,8 @@ error_reporting(E_ALL);
 <?php
 $canditateNameValue = "";
 $voteValue = $_POST['yourvote'];
+$nameValue = $_POST['yourname'];
+
 
 switch ($voteValue){
 	case '1':
