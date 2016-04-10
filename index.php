@@ -111,7 +111,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 <?php
 	//$myfile = fopen('myinfo.csv', 'a');
 	
-	$fp = fopen('myinfo.csv',"a") or die("can't open the file!");
+	$fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	
 	//print("<table border='1' cellspacing='2' cellpadding='2'>\n");
 	
@@ -122,7 +122,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 	$trumpCount = 0;
 	$sandersCount = 0;
 	$cruzCount = 0;
-	$hasVoted = false;
+
 	while ($row= fgetcsv($fp, 1024, ",")){
 	
 		$columns = count($row);
@@ -130,9 +130,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 		for ($m=0; $m<$columns; $m++) {
 			$value = $row[$m];
 			
-			if ($value == $nameValue){
-				$hasVoted = true;
-			}
+			
 			}
 			print("<td>".$value."</td>\n");
 			
@@ -141,26 +139,20 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 		print("</tr>\n");
 	
 	
-	 // end while $row
+	} // end while $row
 
-	//print("<tr>\n");
+	print("<tr>\n");
 	
-	//fclose($fp) or die("can't close the file");
-	if ($hasVoted == false){
+	fclose($fp) or die("can't close the file");
+
 	fputcsv($myfile, $theDecision);
-	print "File written with this data: ";
-	print $voteValue;
-}
-	else{
-		print "already voted";
-	}
 	//fwrite($myfile, $theValues);
 	// fwrite($myfile, $theage);
 	// fwrite($myfile, $theweight);
 	
-	fclose($fp);
-	// print "File written with this data: ";
-	// print $voteValue;
+	fclose($myfile);
+	print "File written with this data: ";
+	print $voteValue;
 
 ?>
 
