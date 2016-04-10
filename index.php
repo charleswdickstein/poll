@@ -117,7 +117,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 		print("<tr>\n");
 		for ($m=0; $m<$columns; $m++) {
 			$value = $row[$m];
-			if ($value == $nameValue){
+			if ($value == "charlie@gmail.com"){
 				$hasVoted = 0;
 			}
 }
