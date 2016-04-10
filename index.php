@@ -53,7 +53,7 @@ error_reporting(E_ALL);
 		return false;
 	}
 	 else if (!name.match(pattern)){
-	 	alert("invalid")
+	 	alert("invalid");
 	 	return false;
 	}
 	
