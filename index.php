@@ -109,10 +109,10 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 
 </ul>
 <?php
-	$myfile = fopen('myinfo.csv', 'r');
-	$hasVoted = -1;
-	while ($row= fgetcsv($myfile, 1024, ",")){
+	$myfile = fopen('myinfo.csv', 'a');
 	
+	while ($row= fgetcsv($myfile, 1024, ",")){
+		$hasVoted = -1;
 		$columns = count($row);
 		print("<tr>\n");
 		for ($m=0; $m<$columns; $m++) {
