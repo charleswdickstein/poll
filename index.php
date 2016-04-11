@@ -117,7 +117,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 		print("<tr>\n");
 		for ($m=0; $m<$columns; $m++) {
 			$value = $row[$m];
-			echo $value;
+			print "This is ".$value;
 }
  	print "This is hasVoted ".$hasVoted;
 	// if ($hasVoted = -1){
