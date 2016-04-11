@@ -103,10 +103,10 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 <h1>Poll Results</h1>
 <ul>
 
-	Clinton  <?php echo number_format($clintonPercent); ?><li style="height: 100px; width: <?php echo $clintonPercent; ?>; background-color: blue;"></li><br/>
-	Trump <?php echo number_format($trumpPercent); ?><li style="height: 100px; width: <?php echo $trumpPercent; ?>; background-color: blue;"></li><br/>
-	Sanders <?php echo number_format($sandersPercent); ?><li style="height: 100px; width: <?php echo $sandersPercent; ?>; background-color: blue;"></li><br/>
-	Cruz <?php echo number_format($cruzPercent); ?><li style="height: 100px; width: <?php echo $cruzPercent; ?>; background-color: blue;"></li><br/>
+	Clinton  <?php echo number_format($clintonPercent, 2); ?><li style="height: 100px; width: <?php echo $clintonPercent; ?>; background-color: blue;"></li><br/>
+	Trump <?php echo number_format($trumpPercent, 2); ?><li style="height: 100px; width: <?php echo $trumpPercent; ?>; background-color: blue;"></li><br/>
+	Sanders <?php echo number_format($sandersPercent, 2); ?><li style="height: 100px; width: <?php echo $sandersPercent; ?>; background-color: blue;"></li><br/>
+	Cruz <?php echo number_format($cruzPercent,2); ?><li style="height: 100px; width: <?php echo $cruzPercent; ?>; background-color: blue;"></li><br/>
 </ul>
 
 <!-- // 	$thefile = file('myinfo.csv');
