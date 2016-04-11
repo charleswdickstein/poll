@@ -78,7 +78,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 
 
 
-	echo "Votes: ".$totalVotes;
+	echo '<h1>"Votes: ".$totalVotes</h1>';
 	echo " Clinton: $clintonPercent".$clintonCount;
 	echo " Trump: ".$trumpCount;
 	echo " Sanders: ".$sandersCount;
