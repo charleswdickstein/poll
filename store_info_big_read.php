@@ -77,33 +77,33 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	$cruzPercent = (($cruzCount/$totalVotes)*100)."%";
 
 
-	echo "<h1>";
-	echo "Votes: ".$totalVotes;
-	echo "</h1>";
-	echo "<table>";
-	echo "<tr>";
-	echo "<td>";
+	// echo "<h1>";
+	// echo "Votes: ".$totalVotes;
+	// echo "</h1>";
+	// echo "<table>";
+	// echo "<tr>";
+	// echo "<td>";
 
-	echo " Clinton: $clintonPercent".$clintonCount;
-	echo "</td>";
-	echo "<td>";
-	echo " Trump: ".$trumpCount;
-	echo "</td>";
-	echo "<td>";
-	echo " Sanders: ".$sandersCount;
-	echo "</td>";
-	echo "<td>";
-	echo " Cruz:  ".$cruzCount;
-	echo "</td>";
-	echo "</tr>";
-	echo "</table>";
+	// echo " Clinton: $clintonPercent".$clintonCount;
+	// echo "</td>";
+	// echo "<td>";
+	// echo " Trump: ".$trumpCount;
+	// echo "</td>";
+	// echo "<td>";
+	// echo " Sanders: ".$sandersCount;
+	// echo "</td>";
+	// echo "<td>";
+	// echo " Cruz:  ".$cruzCount;
+	// echo "</td>";
+	// echo "</tr>";
+	// echo "</table>";
 
 
 ?>
 <h1>Poll Results</h1>
 <ul>
 
-	Clinton<li style="height: 100px; width: <?php echo $clintonPercent; ?>; background-color: blue;"></li><br/>
+	Clinton  <?php echo $clintonPercent; ?><li style="height: 100px; width: <?php echo $clintonPercent; ?>; background-color: blue;"></li><br/>
 	Trump<li style="height: 100px; width: <?php echo $trumpPercent; ?>; background-color: blue;"></li><br/>
 	Sanders<li style="height: 100px; width: <?php echo $sandersPercent; ?>; background-color: blue;"></li><br/>
 	Cruz<li style="height: 100px; width: <?php echo $cruzPercent; ?>; background-color: blue;"></li><br/>
