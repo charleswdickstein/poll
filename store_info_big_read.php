@@ -71,13 +71,14 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	fclose($fp) or die("can't close the file");
 
 	$totalVotes = $clintonCount + $trumpCount + $sandersCount + $cruzCount;
-
+	$clintonPercent = $clintonCount/$totalVotes;
 
 	echo "Votes: ".$totalVotes;
-	echo " Clinton: ".$clintonCount;
+	echo " Clinton: $clintonPercent".$clintonCount;
 	echo " Trump: ".$trumpCount;
 	echo " Sanders: ".$sandersCount;
 	echo " Cruz:  ".$cruzCount;
+
 
 ?>
 
