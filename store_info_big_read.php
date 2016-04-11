@@ -72,9 +72,9 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 
 	$totalVotes = $clintonCount + $trumpCount + $sandersCount + $cruzCount;
 	$clintonPercent = (($clintonCount/$totalVotes)*100)."%";
-	$trumpPercent = $trumpCount/$totalVotes)*100)."%";
-	$sandersCount = $sandersCount/$totalVotes)*100)."%";
-	$cruzCount = $cruzCount/$totalVotes)*100)."%";
+	$trumpPercent = (($trumpCount/$totalVotes)*100)."%";
+	$sandersCount = (($sandersCount/$totalVotes)*100)."%";
+	$cruzCount = (($cruzCount/$totalVotes)*100)."%";
 
 
 
