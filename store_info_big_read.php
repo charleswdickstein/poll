@@ -72,9 +72,9 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 
 	$totalVotes = $clintonCount + $trumpCount + $sandersCount + $cruzCount;
 	$clintonPercent = (($clintonCount/$totalVotes)*100)."%";
-	$trumpPercent = $trumpCount/$totalVotes;
-	$sandersCount = $sandersCount/$totalVotes;
-	$cruzCount = $cruzCount/$totalVotes;
+	$trumpPercent = $trumpCount/$totalVotes)*100)."%";
+	$sandersCount = $sandersCount/$totalVotes)*100)."%";
+	$cruzCount = $cruzCount/$totalVotes)*100)."%";
 
 
 
@@ -86,8 +86,13 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 
 
 ?>
+<h1>Poll Results</h1>
 <ul>
-	Clinton<li style="height: 100px; width: <?php echo $clintonPercent; ?>; background-color: blue;"></li>
+
+	Clinton<li style="height: 100px; width: <?php echo $clintonPercent; ?>; background-color: blue;"></li><br/>
+	Trump<li style="height: 100px; width: <?php echo $trumpPercent; ?>; background-color: blue;"></li><br/>
+	Sanders<li style="height: 100px; width: <?php echo $sandersPercent; ?>; background-color: blue;"></li><br/>
+	Cruz<li style="height: 100px; width: <?php echo $cruzPercent; ?>; background-color: blue;"></li><br/>
 </ul>
 
 <!-- // 	$thefile = file('myinfo.csv');
