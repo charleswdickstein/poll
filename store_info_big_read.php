@@ -71,10 +71,10 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	fclose($fp) or die("can't close the file");
 
 	$totalVotes = $clintonCount + $trumpCount + $sandersCount + $cruzCount;
-	$clintonPercent = (($clintonCount/$totalVotes)*100)."%";
-	$trumpPercent = (($trumpCount/$totalVotes)*100)."%";
-	$sandersPercent = (($sandersCount/$totalVotes)*100)."%";
-	$cruzPercent = (($cruzCount/$totalVotes)*100)."%";
+	$clintonPercent = number_format((($clintonCount/$totalVotes)*100))."%";
+	$trumpPercent = number_format((($trumpCount/$totalVotes)*100))."%";
+	$sandersPercent = number_format((($sandersCount/$totalVotes)*100))."%";
+	$cruzPercent = number_format((($cruzCount/$totalVotes)*100))."%";
 
 
 	// echo "<h1>";
@@ -103,10 +103,10 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 <h1>Poll Results</h1>
 <ul>
 
-	Clinton  <?php echo number_format($clintonPercent, 2); ?><li style="height: 100px; width: <?php echo $clintonPercent; ?>; background-color: blue;"></li><br/>
-	Trump <?php echo number_format($trumpPercent, 2); ?><li style="height: 100px; width: <?php echo $trumpPercent; ?>; background-color: blue;"></li><br/>
-	Sanders <?php echo number_format($sandersPercent, 2); ?><li style="height: 100px; width: <?php echo $sandersPercent; ?>; background-color: blue;"></li><br/>
-	Cruz <?php echo number_format($cruzPercent,2); ?><li style="height: 100px; width: <?php echo $cruzPercent; ?>; background-color: blue;"></li><br/>
+	Clinton  <?php echo $clintonPercent; ?><li style="height: 100px; width: <?php echo $clintonPercent; ?>; background-color: blue;"></li><br/>
+	Trump <?php echo $trumpPercent; ?><li style="height: 100px; width: <?php echo $trumpPercent; ?>; background-color: blue;"></li><br/>
+	Sanders <?php echo $sandersPercent; ?><li style="height: 100px; width: <?php echo $sandersPercent; ?>; background-color: blue;"></li><br/>
+	Cruz <?php echo $cruzPercent; ?><li style="height: 100px; width: <?php echo $cruzPercent; ?>; background-color: blue;"></li><br/>
 </ul>
 
 <!-- // 	$thefile = file('myinfo.csv');
