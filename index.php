@@ -123,7 +123,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 	// if ($hasVoted = -1){
 	fputcsv($myfile, $theDecision);
 }
-}
+
 
 	
 
