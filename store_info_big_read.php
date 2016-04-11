@@ -72,15 +72,23 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 
 	$totalVotes = $clintonCount + $trumpCount + $sandersCount + $cruzCount;
 	$clintonPercent = $clintonCount/$totalVotes;
+	$trumpPercent = $trumpCount/$totalVotes;
+	$sandersCount = $sandersCount/$totalVotes;
+	$cruzCount = $cruzCount/$totalVotes;
+
+
 
 	echo "Votes: ".$totalVotes;
-	echo " Clinton: $clintonPercent".$clintonCount;
+	echo " Clinton: ".$clintonCount;
 	echo " Trump: ".$trumpCount;
 	echo " Sanders: ".$sandersCount;
 	echo " Cruz:  ".$cruzCount;
 
 
 ?>
+<ul>
+	Clinton<li style="height: 100px; width: <?php echo $clintonPercent; ?>; background-color: blue;"></li>
+</ul>
 
 <!-- // 	$thefile = file('myinfo.csv');
 // 	$clintonCount = 0;
