@@ -117,16 +117,10 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 		print("<tr>\n");
 		for ($m=0; $m<$columns; $m++) {
 			$value = $row[$m];
-			switch ($value){
-				case $nameValue:
-					$hasVoted = 1;
-					break;
-				default:
-					$hasVoted = -1;
-			}
+			echo $value;
 }
- print "This is hasVoted ".$hasVoted;
-	if ($hasVoted = -1){
+ 	print "This is hasVoted ".$hasVoted;
+	// if ($hasVoted = -1){
 	fputcsv($myfile, $theDecision);
 }
 }
