@@ -43,10 +43,11 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 
 <?php
 	print "Hello World1";
-	$handle = fopen('myinfo.csv',"r") or die("can't open the file!");
-	print "Hello World2";
+	//$handle = fopen('myinfo.csv',"r") or die("can't open the file!");
+	
 	$row = 1;
-if (($handle = fopen("test.csv", "r")) !== FALSE) {
+if (($handle = fopen("myinfo.csv", "r")) !== FALSE) {
+	print "Hello World2";
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
         $num = count($data);
         echo "<p> $num fields in line $row: <br /></p>\n";
