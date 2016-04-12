@@ -126,6 +126,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 			}
 
 		}
+	fclose($fp);
 	if ($hasVoted == false){
 	$myfile = fopen('myinfo.csv', 'a');
 	fputcsv($myfile, $theDecision);
@@ -136,7 +137,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 	// fwrite($myfile, $theage);
 	// fwrite($myfile, $theweight);
 	
-	fclose($fp);
+
 	print "File written with this data: ";
 	print $voteValue;
 
