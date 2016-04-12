@@ -15,8 +15,7 @@ error_reporting(E_ALL);
 	<li><a href="store_info_line_read.php">Line Read</a></li>
 	<li><a href="myinfo.csv">Text File</a></li>
 </ul>
-	<h1>Form to save your name, age, and weight </h2>
-
+	<h1>Form to vote
 <form action="https://aqueous-tundra-58634.herokuapp.com/handle_form.php"
        method="post" onSubmit="return checkform()">
 <input type="radio" name="yourvote" value="1" checked>Hilary Clinton<br>
