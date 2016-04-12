@@ -73,7 +73,9 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 			if ($infoChoice == 1){
 			print("<td>".$value."</td>\n");
 		}
-		
+		else{
+			
+		}
 			
 		
 		}  // end for $m
@@ -81,7 +83,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 		}
 	
 	
-	 // end while $row
+	} // end while $row
 
 	print("<tr>\n");
 	
@@ -116,25 +118,16 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	// echo "</tr>";
 	// echo "</table>";
 
-echo "<h1>Poll Results</h1>";
-echo "<ul>"
 
-	echo "<h1>Clinton</h1>";
-	echo "$clintonPercent;";
-	echo "<li style="height: 100px; width: $clintonPercent; background-color: blue;"></li><br/>";
-	//Trump <?php echo $trumpPercent; ?><li style="height: 100px; width: <?php echo $trumpPercent; ?>; background-color: red;"></li><br/>
-	<!-- Sanders <?php echo $sandersPercent; ?><li style="height: 100px; width: <?php echo $sandersPercent; ?>; background-color: blue;"></li><br/>
-	Cruz <?php echo $cruzPercent; ?><li style="height: 100px; width: <?php echo $cruzPercent; ?>; background-color: red;"></li><br/> -->
-</ul>
 ?>
-<!-- <h1>Poll Results</h1>
+<h1>Poll Results</h1>
 <ul>
 
 	Clinton  <?php echo $clintonPercent; ?><li style="height: 100px; width: <?php echo $clintonPercent; ?>; background-color: blue;"></li><br/>
 	Trump <?php echo $trumpPercent; ?><li style="height: 100px; width: <?php echo $trumpPercent; ?>; background-color: red;"></li><br/>
 	Sanders <?php echo $sandersPercent; ?><li style="height: 100px; width: <?php echo $sandersPercent; ?>; background-color: blue;"></li><br/>
 	Cruz <?php echo $cruzPercent; ?><li style="height: 100px; width: <?php echo $cruzPercent; ?>; background-color: red;"></li><br/>
-</ul> -->
+</ul>
 
 <!-- // 	$thefile = file('myinfo.csv');
 // 	$clintonCount = 0;
