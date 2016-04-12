@@ -74,7 +74,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 			print("<td>".$value."</td>\n");
 		}
 		else{
-			
+
 		}
 			
 		
@@ -83,7 +83,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 		}
 	
 	
-	} // end while $row
+	 // end while $row
 
 	print("<tr>\n");
 	
