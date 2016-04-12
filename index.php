@@ -119,7 +119,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 	
 		$columns = count($row);
 		print("<tr>\n");
-		if ($columns > 0){
+		if ($columns > 1){
 		for ($m=0; $m<$columns; $m++) {
 			$value = $row[1];
 			print "<p>"."This is value".$value." and this is nameValue".$nameValue."<p>"; 
