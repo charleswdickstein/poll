@@ -48,6 +48,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 	$row = 1;
 if (($handle = fopen("myinfo.csv", "r")) !== FALSE) {
 	print "Hello World2";
+	$hasVoted = false;
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
         $num = count($data);
         echo "<p> $num fields in line $row: <br /></p>\n";
@@ -55,6 +56,7 @@ if (($handle = fopen("myinfo.csv", "r")) !== FALSE) {
         for ($c=0; $c < $num; $c++) {
         	if (strcmp($data[$c], $nameValue) == 0){
         		print "Already VOTED";
+        		$hasVoted = true;
         	}
             echo $data[$c] . "<br />\n";
         }
@@ -83,9 +85,14 @@ if (($handle = fopen("myinfo.csv", "r")) !== FALSE) {
 	// }
 	// fclose($fp);
 	// if ($hasVoted == false){
+if ($hasVoted == false){
 	$myfile = fopen('myinfo.csv', 'a');
 	fputcsv($myfile, $theDecision);
 	fclose($myfile);
+}
+else{
+	print "CANNOT VOTE CHEATER";
+}
 
 
 	//fwrite($myfile, $theValues);
