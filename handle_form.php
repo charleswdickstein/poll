@@ -42,37 +42,33 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 </ul>
 
 <?php
-	$fp = fopen("myinfo.csv","r") or die("can't open the file!");
+	// $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	
-	print("<table border='1' cellspacing='2' cellpadding='2'>\n");
-	//$myfile = fopen('myinfo.csv', 'a');
-	$hasVoted = false;
-	while (($row= fgetcsv($fp, 1024, ",")) !== FALSE){
+	// print("<table border='1' cellspacing='2' cellpadding='2'>\n");
+	// //$myfile = fopen('myinfo.csv', 'a');
+	// $hasVoted = false;
+	// while (($row= fgetcsv($fp, 1024, ",") !== FALSE)){
 	
-		$columns = count($row);
-		print "<h1>".$columns."</h1>";
-		print("<tr>\n");
-		if ($columns > 1){
-			if (strcmp($value, $nameValue) == 0){
-				$hasVoted = TRUE;
-			}
-		// 		$hasVoted = true;
-		// for ($m=0; $m<$columns; $m++) {
-		// 	$value = $row[1];
-		// 	print "<p>"."This is value".$value." and this is nameValue".$nameValue."<p>"; 
-		// 	if (strcmp($value, $nameValue) == 0){
-		// 		$hasVoted = true;
-		// 	}
+	// 	$columns = count($row);
+	// 	print "<h1>".$columns."</h1>";
+	// 	print("<tr>\n");
+	// 	if ($columns > 1){
+	// 	for ($m=0; $m<$columns; $m++) {
+	// 		$value = $row[1];
+	// 		print "<p>"."This is value".$value." and this is nameValue".$nameValue."<p>"; 
+	// 		if (strcmp($value, $nameValue) == 0){
+	// 			$hasVoted = true;
+	// 		}
 
-		// }
-	}
-	fclose($fp);
-	if ($hasVoted == false){
+	// 	}
+	// }
+	// fclose($fp);
+	// if ($hasVoted == false){
 	$myfile = fopen('myinfo.csv', 'a');
 	fputcsv($myfile, $theDecision);
 	fclose($myfile);
-}
-}
+
+
 	//fwrite($myfile, $theValues);
 	// fwrite($myfile, $theage);
 	// fwrite($myfile, $theweight);
