@@ -119,6 +119,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 	
 		$columns = count($row);
 		print("<tr>\n");
+		if ($columns > 0){
 		for ($m=0; $m<$columns; $m++) {
 			$value = $row[1];
 			print "<p>"."This is value".$value." and this is nameValue".$nameValue."<p>"; 
@@ -127,6 +128,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 			}
 
 		}
+	}
 	fclose($fp);
 	if ($hasVoted == false){
 	$myfile = fopen('myinfo.csv', 'a');
