@@ -18,8 +18,21 @@ error_reporting(E_ALL);
 
 <h3>My Info - read in all at once by PHP</h3>
 
+<form action="https://aqueous-tundra-58634.herokuapp.com/store_info_big_read.php"
+       method="post" onSubmit="return checkform()">
+<input type="radio" name="yourinfo" value="1" checked>Summary<br>
+<input type="hidden" name="yourinfo" value="2">Poll
+<input type=submit value="Submit"/>
+
+
+
+
+
+
 
 <?php
+$infoChoice = $_POST['yourinfo'];
+
 
 $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	
@@ -57,7 +70,9 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 					$cruzCount++;
 					break;
 			}
+			if ($infoChoice == 1){
 			print("<td>".$value."</td>\n");
+		}
 			
 		
 		}  // end for $m
