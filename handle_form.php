@@ -47,7 +47,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 	print("<table border='1' cellspacing='2' cellpadding='2'>\n");
 	//$myfile = fopen('myinfo.csv', 'a');
 	$hasVoted = false;
-	while ($row= fgetcsv($fp, 1024, ",")){
+	while (($row= fgetcsv($fp, 1024, ",") !== FALSE){
 	
 		$columns = count($row);
 		print "<h1>".$columns."</h1>";
