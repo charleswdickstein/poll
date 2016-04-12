@@ -35,14 +35,16 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 <h2>Your Complete Info:</h2>
 
 <ul>
-	<li><h3>Your vote: <?php echo $canditateNameValue; ?> </li>
+	<li><h3>Your vote: <?php echo $canditateNameValue; ?></h3></li>
 <!-- 	<li><h3>Your age: <?php echo $theage; ?> </li>
 	<li><h3>Your weight: <?php echo $theweight; ?> </li> -->
 
 </ul>
 
 <?php
+	print "Hello World1";
 	$handle = fopen('myinfo.csv',"r") or die("can't open the file!");
+	print "Hello World2";
 	$row = 1;
 if (($handle = fopen("test.csv", "r")) !== FALSE) {
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
