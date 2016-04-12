@@ -108,17 +108,34 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 	<li><h3>Your weight: <?php echo $theweight; ?> </li> -->
 
 </ul>
-<?php
-	$myfile = fopen('myinfo.csv', 'a');
-	
-	
 
+<?php
+	$fp = fopen('myinfo.csv',"r") or die("can't open the file!");
+	
+	print("<table border='1' cellspacing='2' cellpadding='2'>\n");
+	//$myfile = fopen('myinfo.csv', 'a');
+	$hasVoted = false;
+	while ($row= fgetcsv($fp, 1024, ",")){
+	
+		$columns = count($row);
+		print("<tr>\n");
+		for ($m=0; $m<$columns; $m++) {
+			$value = $row[$m];
+			if ($value == $email){
+				$hasVoted = true;
+			}
+
+		}
+	if ($hasVoted == false){
+	$myfile = fopen('myinfo.csv', 'a');
 	fputcsv($myfile, $theDecision);
+	fclose($myfile);
+}
 	//fwrite($myfile, $theValues);
 	// fwrite($myfile, $theage);
 	// fwrite($myfile, $theweight);
 	
-	fclose($myfile);
+	fclose($fp);
 	print "File written with this data: ";
 	print $voteValue;
 
