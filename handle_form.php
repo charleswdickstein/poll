@@ -56,6 +56,7 @@ if (($handle = fopen("myinfo.csv", "r")) !== FALSE) {
             echo $data[$c] . "<br />\n";
         }
     }
+    echo "There are $rows rows";
     fclose($handle);
 }
 	
