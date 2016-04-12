@@ -131,6 +131,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 	fputcsv($myfile, $theDecision);
 	fclose($myfile);
 }
+}
 	//fwrite($myfile, $theValues);
 	// fwrite($myfile, $theage);
 	// fwrite($myfile, $theweight);
