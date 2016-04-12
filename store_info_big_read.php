@@ -73,9 +73,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 			if ($infoChoice == 1){
 			print("<td>".$value."</td>\n");
 		}
-		else{
-
-		}
+		
 			
 		
 		}  // end for $m
@@ -83,7 +81,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 		}
 	
 	
-	} // end while $row
+	 // end while $row
 
 	print("<tr>\n");
 	
