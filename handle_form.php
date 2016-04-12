@@ -50,7 +50,6 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 	while (($row= fgetcsv($fp, 1024, ",")) !== FALSE){
 	
 		$columns = count($row);
-
 		print "<h1>".$columns."</h1>";
 		print("<tr>\n");
 		if ($columns > 1){
@@ -69,7 +68,6 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 	}
 	fclose($fp);
 	if ($hasVoted == false){
-	print $theDecision;
 	$myfile = fopen('myinfo.csv', 'a');
 	fputcsv($myfile, $theDecision);
 	fclose($myfile);
