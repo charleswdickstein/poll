@@ -50,7 +50,8 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 	while (($row= fgetcsv($fp, 1024, ",")) !== FALSE){
 	
 		$columns = count($row);
-		print "<h1>".$columns."</h1>";
+		//print $columns;
+		print "<h1> COLS ".$columns."</h1>";
 		print("<tr>\n");
 		if ($columns > 1){
 			if (strcmp($value, $nameValue) == 0){
