@@ -53,6 +53,9 @@ if (($handle = fopen("myinfo.csv", "r")) !== FALSE) {
         echo "<p> $num fields in line $row: <br /></p>\n";
         $row++;
         for ($c=0; $c < $num; $c++) {
+        	if (strcmp($data[$c], $nameValue) == 0){
+        		print "Already VOTED";
+        	}
             echo $data[$c] . "<br />\n";
         }
     }
