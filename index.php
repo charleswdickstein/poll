@@ -121,7 +121,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 		print("<tr>\n");
 		for ($m=0; $m<$columns; $m++) {
 			$value = $row[$m];
-			if ($value == $nameValue){
+			if (strcasecmp($value, $nameValue)){
 				$hasVoted = true;
 			}
 
