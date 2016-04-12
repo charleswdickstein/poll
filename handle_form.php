@@ -67,6 +67,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 		// }
 	}
 	fclose($fp);
+	print "This is the decison ".$theDecision;
 	if ($hasVoted == false){
 	$myfile = fopen('myinfo.csv', 'a');
 	fputcsv($myfile, $theDecision);
