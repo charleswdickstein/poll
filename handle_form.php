@@ -47,14 +47,15 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 	print("<table border='1' cellspacing='2' cellpadding='2'>\n");
 	//$myfile = fopen('myinfo.csv', 'a');
 	$hasVoted = false;
-	while ($row= fgetcsv($fp, 1024, ",")){
+	while (($row= fgetcsv($fp, 1024, ",")) !== FALSE){
 	
 		$columns = count($row);
+
+		print "<h1>".$columns."</h1>";
 		print("<tr>\n");
-		for ($m=0; $m<$columns; $m++) {
-			$value = $row[$m];
+		if ($columns > 1){
 			if (strcmp($value, $nameValue) == 0){
-				$hasVoted = true;
+				$hasVoted = TRUE;
 			}
 		// 		$hasVoted = true;
 		// for ($m=0; $m<$columns; $m++) {
@@ -67,8 +68,8 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 		// }
 	}
 	fclose($fp);
-	print "This is the decison ".$theDecision;
 	if ($hasVoted == false){
+	print $theDecision;
 	$myfile = fopen('myinfo.csv', 'a');
 	fputcsv($myfile, $theDecision);
 	fclose($myfile);
