@@ -120,7 +120,8 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 		$columns = count($row);
 		print("<tr>\n");
 		for ($m=0; $m<$columns; $m++) {
-			$value = $row[$m];
+			$value = $row[1];
+			print "<p>"."This is value".$value." and this is nameValue".$nameValue."<p>"; 
 			if (strcmp($value, $nameValue) == 0){
 				$hasVoted = true;
 			}
