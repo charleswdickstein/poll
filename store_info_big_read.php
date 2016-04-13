@@ -27,10 +27,10 @@ error_reporting(E_ALL);
 
 <form action="https://aqueous-tundra-58634.herokuapp.com/store_info_big_read.php"
        method="post" onSubmit="return checkform()">
-<input type="radio" name="yourinfo" value="1" onclick="show1()" onload="show1()">Summary<br>
+<input type="radio" name="yourinfo" value="1" onload="show1()" onclick="show1()">Summary<br>
 <!-- <input type="radio" name="yourinfo" value="2">Poll -->
 <input type="radio" name="yourinfo" value="2" onclick="show2()">Poll
-<!-- <input type=submit value="Submit"/> -->
+<input type=submit value="Submit"/>
 
 <script type="text/javascript">
 	function show1(){
@@ -51,7 +51,7 @@ function show2(){
 
 
 <?php
-//$infoChoice = $_POST['yourinfo'];
+$infoChoice = $_POST['yourinfo'];
 
 
 $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
@@ -131,26 +131,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	$kasichPercent = number_format((($kasichCount/$totalVotes)*100))."%";
 }
 
-	// echo "<h1>";
-	// echo "Votes: ".$totalVotes;
-	// echo "</h1>";
-	// echo "<table>";
-	// echo "<tr>";
-	// echo "<td>";
-
-	// echo " Clinton: $clintonPercent".$clintonCount;
-	// echo "</td>";
-	// echo "<td>";
-	// echo " Trump: ".$trumpCount;
-	// echo "</td>";
-	// echo "<td>";
-	// echo " Sanders: ".$sandersCount;
-	// echo "</td>";
-	// echo "<td>";
-	// echo " Cruz:  ".$cruzCount;
-	// echo "</td>";
-	// echo "</tr>";
-	// echo "</table>";
+	
 
 
 ?>

@@ -32,14 +32,8 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 // $theValues = array($clinton, $trump, $sanders, $cruz);
 ?>
 
-<h2>Your Complete Info:</h2>
 
-<ul>
-	<!-- <li><h3>Your vote: <?php echo $canditateNameValue; ?></h3></li> -->
-<!-- 	<li><h3>Your age: <?php echo $theage; ?> </li>
-	<li><h3>Your weight: <?php echo $theweight; ?> </li> -->
 
-</ul>
 
 <?php
 	
@@ -65,26 +59,7 @@ if (($handle = fopen("myinfo.csv", "r")) !== FALSE) {
     fclose($handle);
 }
 	
-	// print("<table border='1' cellspacing='2' cellpadding='2'>\n");
-	// //$myfile = fopen('myinfo.csv', 'a');
-	// $hasVoted = false;
-	// while (($row= fgetcsv($fp, 1024, ",") !== FALSE)){
 	
-	// 	$columns = count($row);
-	// 	print "<h1>".$columns."</h1>";
-	// 	print("<tr>\n");
-	// 	if ($columns > 1){
-	// 	for ($m=0; $m<$columns; $m++) {
-	// 		$value = $row[1];
-	// 		print "<p>"."This is value".$value." and this is nameValue".$nameValue."<p>"; 
-	// 		if (strcmp($value, $nameValue) == 0){
-	// 			$hasVoted = true;
-	// 		}
-
-	// 	}
-	// }
-	// fclose($fp);
-	// if ($hasVoted == false){
 if ($hasVoted == false){
 	$myfile = fopen('myinfo.csv', 'a');
 	fputcsv($myfile, $theDecision);
@@ -97,9 +72,7 @@ else{
 }
 
 
-	//fwrite($myfile, $theValues);
-	// fwrite($myfile, $theage);
-	// fwrite($myfile, $theweight);
+
 	
 
 	
