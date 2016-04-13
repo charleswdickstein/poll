@@ -27,9 +27,9 @@ error_reporting(E_ALL);
 
 <form action="https://aqueous-tundra-58634.herokuapp.com/store_info_big_read.php"
        method="post" onSubmit="return checkform()">
-<input type="radio" name="yourinfo" value="1" onclick="show2();">Summary<br>
+<input type="radio" name="yourinfo" value="1" onclick="show1();">Summary<br>
 <!-- <input type="radio" name="yourinfo" value="2">Poll -->
-<input type="radio" name="yourinfo" value="2" onclick="show1();" />
+<input type="radio" name="yourinfo" value="2" onclick="show2();" >Poll<br>
 <input type=submit value="Submit"/>
 
 <script type="text/javascript">
@@ -66,7 +66,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	while ($row= fgetcsv($fp, 1024, ",")){
 	
 		$columns = count($row);
-		print("<tr>\n");
+		print("<tr id='div1'>\n");
 		for ($m=0; $m<$columns; $m++) {
 			$value = $row[$m];
 			
@@ -88,7 +88,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 					break;
 			}
 			// echo "<div id='div2'";
-			print("<td id='div2'>".$value."</td>\n");
+			print("<td>".$value."</td>\n");
 			
 		
 		
@@ -136,7 +136,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 
 
 ?>
-<div id="div1">
+<div id="div2">
 <h1>Poll Results</h1>
 <ul>
 
