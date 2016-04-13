@@ -1,57 +1,4 @@
 <?php
-ini_set('display_errors', true);
-ini_set('display_startup_errors', true);
-error_reporting(E_ALL);
-?>
-<html>
-<head>
-	<title>Read All INFO</title>
-	<style>
-		body {background-color: #fee;
-		      color: navy;
-		      margin-left: 25px;
-		      }
-		h2 {color: maroon;}	
-
-		/*#poll ul li{
-			height: 100px;
-			width: 100px;
-			background-color: blue;
-		}*/
-
-	</style>
-</head>
-<body>
-
-<h3>Results</h3>
-
-<form action="https://aqueous-tundra-58634.herokuapp.com/store_info_big_read.php"
-       method="post" onSubmit="return checkform()">
-<input type="radio" name="yourinfo" value="1" onload="show1()" onclick="show1()" checked="checked">Summary<br>
-<!-- <input type="radio" name="yourinfo" value="2">Poll -->
-<input type="radio" name="yourinfo" value="2" onclick="show2()">Poll
-<input type="radio" name="yourinfo" balue="3" onclick="location.href = 'poll.php'">
-<input type=submit value="Submit"/>
-
-<script type="text/javascript">
-	function show1(){
-  document.getElementById('div1').style.display ='none';
-  document.getElementById('div2').style.display ='block';
-}
-
-function show2(){
-  document.getElementById('div1').style.display = 'block';
-  document.getElementById('div2').style.display ='none';
-}
-</script>
-
-
-
-
-
-
-
-<?php
 //$infoChoice = $_POST['yourinfo'];
 
 
@@ -98,21 +45,21 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 					//do nothing
 			}
 			// if ($infoChoice == 1){
-			print("<td>".$value."</td>\n");
+			//print("<td>".$value."</td>\n");
 		//}
 		
 			
 		
 		}  // end ";for $m
-	echo "<h1>Voting Key:</h1>";
-	echo "<ul>";
-	echo "<li>Hilary Clinton : 1</li>";
-	echo "<li>Donald Trump : 2</li>";
-	echo "<li>Bernie Saners : 3</li>";
-	echo "<li>Ted Cruz : 4</li>";
-	echo "<li>John Kasich : 5</li>";
-	echo "</ul>";
-		print("</tr>\n");
+	// echo "<h1>Voting Key:</h1>";
+	// echo "<ul>";
+	// echo "<li>Hilary Clinton : 1</li>";
+	// echo "<li>Donald Trump : 2</li>";
+	// echo "<li>Bernie Saners : 3</li>";
+	// echo "<li>Ted Cruz : 4</li>";
+	// echo "<li>John Kasich : 5</li>";
+	// echo "</ul>";
+	// 	print("</tr>\n");
 		}
 	
 	
@@ -149,11 +96,3 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	Kasich <?php echo $cruzPercent; ?><li style="height: 100px; width: <?php echo $kasichPercent; ?>; background-color: red;"></li><br/>
 </ul>
 </div>
-
-
-
-
-
-
-</body>
-</html>
