@@ -30,7 +30,7 @@ error_reporting(E_ALL);
 <input type="radio" name="yourinfo" value="1" onload="show1()" onclick="show1()" checked="checked">Summary<br>
 <!-- <input type="radio" name="yourinfo" value="2">Poll -->
 <input type="radio" name="yourinfo" value="2" onclick="show2()">Poll
-<input type="radio" name="yourinfo" balue="3" onclick="location.href = 'www.google.com'">
+<input type="radio" name="yourinfo" balue="3" onclick="location.href = 'index.php'">
 <input type=submit value="Submit"/>
 
 <script type="text/javascript">
