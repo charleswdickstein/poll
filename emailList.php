@@ -4,7 +4,7 @@
 
 $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	
-	// print("<table  id='div2' border='1' cellspacing='2' cellpadding='2'>\n");
+	print("<table  id='div2' border='1' cellspacing='2' cellpadding='2'>\n");
 	
 	//print("<tr><td>Year</td><td>Jan</td><td>Feb</td><td>Mar</td><td>Apr</td><td>May</td><td>Jun</td>".
 	     //  "<td>Jul</td><td>Aug</td><td>Sep</td><td>Oct</td><td>Nov</td><td>Dec</td></tr>\n");
@@ -45,21 +45,21 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 					//do nothing
 			}
 			// if ($infoChoice == 1){
-			//print("<td>".$value."</td>\n");
+			print("<td>".$value."</td>\n");
 		//}
 		
 			
 		
 		}  // end ";for $m
-	// echo "<h1>Voting Key:</h1>";
-	// echo "<ul>";
-	// echo "<li>Hilary Clinton : 1</li>";
-	// echo "<li>Donald Trump : 2</li>";
-	// echo "<li>Bernie Saners : 3</li>";
-	// echo "<li>Ted Cruz : 4</li>";
-	// echo "<li>John Kasich : 5</li>";
-	// echo "</ul>";
-	// 	print("</tr>\n");
+	echo "<h1>Voting Key:</h1>";
+	echo "<ul>";
+	echo "<li>Hilary Clinton : 1</li>";
+	echo "<li>Donald Trump : 2</li>";
+	echo "<li>Bernie Saners : 3</li>";
+	echo "<li>Ted Cruz : 4</li>";
+	echo "<li>John Kasich : 5</li>";
+	echo "</ul>";
+		print("</tr>\n");
 		}
 	
 	
@@ -83,16 +83,3 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 
 
 ?>
-<div id="div1">
-<h1>Poll Results</h1>
-<h4>Key:</h4>
-
-<ul>
-
-	Clinton  <?php echo $clintonPercent; ?><li style="height: 100px; width: <?php echo $clintonPercent; ?>; background-color: blue;"></li><br/>
-	Trump <?php echo $trumpPercent; ?><li style="height: 100px; width: <?php echo $trumpPercent; ?>; background-color: red;"></li><br/>
-	Sanders <?php echo $sandersPercent; ?><li style="height: 100px; width: <?php echo $sandersPercent; ?>; background-color: blue;"></li><br/>
-	Cruz <?php echo $cruzPercent; ?><li style="height: 100px; width: <?php echo $cruzPercent; ?>; background-color: red;"></li><br/>
-	Kasich <?php echo $cruzPercent; ?><li style="height: 100px; width: <?php echo $kasichPercent; ?>; background-color: red;"></li><br/>
-</ul>
-</div>
