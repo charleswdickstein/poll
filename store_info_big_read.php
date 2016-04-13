@@ -23,7 +23,7 @@ error_reporting(E_ALL);
 </head>
 <body>
 
-<h3>My Info - read in all at once by PHP</h3>
+<h3>Results</h3>
 
 <form action="https://aqueous-tundra-58634.herokuapp.com/store_info_big_read.php"
        method="post" onSubmit="return checkform()">
@@ -147,6 +147,14 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 ?>
 <div id="div1">
 <h1>Poll Results</h1>
+<h4>Key:</h4>
+<ul>
+	<li>Hilary Clinton : 1</li>
+	<li>Donald Trump : 2</li>
+	<li>Bernie Saners : 3</li>
+	<li>Ted Cruz : 4</li>
+	<li>John Kasich : 5</li>
+</ul>
 <ul>
 
 	Clinton  <?php echo $clintonPercent; ?><li style="height: 100px; width: <?php echo $clintonPercent; ?>; background-color: blue;"></li><br/>
