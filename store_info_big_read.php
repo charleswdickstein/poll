@@ -65,6 +65,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	$trumpCount = 0;
 	$sandersCount = 0;
 	$cruzCount = 0;
+	$kasichCount = 0;
 
 	while ($row= fgetcsv($fp, 1024, ",")){
 	
@@ -89,6 +90,11 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 				case 4:
 					$cruzCount++;
 					break;
+				case 5:
+					$kasichCount++;
+					break;
+				default:
+					//do nothing
 			}
 			// if ($infoChoice == 1){
 			print("<td>".$value."</td>\n");
@@ -113,6 +119,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	$trumpPercent = number_format((($trumpCount/$totalVotes)*100))."%";
 	$sandersPercent = number_format((($sandersCount/$totalVotes)*100))."%";
 	$cruzPercent = number_format((($cruzCount/$totalVotes)*100))."%";
+	$kasichPercent = number_format((($kasichCount/$totalVotes)*100))."%";
 }
 
 	// echo "<h1>";
@@ -146,6 +153,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	Trump <?php echo $trumpPercent; ?><li style="height: 100px; width: <?php echo $trumpPercent; ?>; background-color: red;"></li><br/>
 	Sanders <?php echo $sandersPercent; ?><li style="height: 100px; width: <?php echo $sandersPercent; ?>; background-color: blue;"></li><br/>
 	Cruz <?php echo $cruzPercent; ?><li style="height: 100px; width: <?php echo $cruzPercent; ?>; background-color: red;"></li><br/>
+	Kasich <?php echo $cruzPercent; ?><li style="height: 100px; width: <?php echo $kasichPercent; ?>; background-color: red;"></li><br/>
 </ul>
 </div>
 

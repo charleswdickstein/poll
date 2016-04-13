@@ -18,8 +18,8 @@ switch ($voteValue){
 	case '4':
 		$canditateNameValue = $_POST['yourcruzvote'];
 		break;
-	default:
-		$canditateNameValue = $_POST['yourbloombergvote'];
+	case '5':
+		$canditateNameValue = $_POST['yourkasichgvote'];
 
 }
 
@@ -42,12 +42,12 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 </ul>
 
 <?php
-	print "Hello World1";
+	
 	//$handle = fopen('myinfo.csv',"r") or die("can't open the file!");
 	
 	$row = 1;
 if (($handle = fopen("myinfo.csv", "r")) !== FALSE) {
-	print "Hello World2";
+	
 	$hasVoted = false;
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
         $num = count($data);
