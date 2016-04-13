@@ -88,8 +88,8 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 					break;
 			}
 			// echo "<div id='div2'";
-			print("<td id='div1'>".$value."</td>\n");
-			// echo "</div>";
+			print("<td id='div2'>".$value."</td>\n");
+			
 		
 		
 			
@@ -136,7 +136,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 
 
 ?>
-<div id="div2">
+<div id="div1">
 <h1>Poll Results</h1>
 <ul>
 
