@@ -21,7 +21,7 @@ April 12
 </header>
 <form action="https://aqueous-tundra-58634.herokuapp.com/emailorpoll.php"
        method="post" onSubmit="return checkform()">
-<input type="radio" name="yourinfo" value="1" onclick="location.href = 'emailList.php'">Poll
+<input type="radio" name="yourinfo" value="1" onclick="location.href = 'emailList.php'">Email List
 
 <input type="radio" name="yourinfo" value="2" onclick="location.href = 'poll.php'">Poll
 
