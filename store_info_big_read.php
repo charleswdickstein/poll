@@ -27,9 +27,9 @@ error_reporting(E_ALL);
 
 <form action="https://aqueous-tundra-58634.herokuapp.com/store_info_big_read.php"
        method="post" onSubmit="return checkform()">
-<input type="radio" name="yourinfo" value="1" onclick="show1();" checked="checked">Summary<br>
+<input type="radio" name="yourinfo" value="1" onclick="show1()" onload="show1()">Summary<br>
 <!-- <input type="radio" name="yourinfo" value="2">Poll -->
-<input type="radio" name="yourinfo" value="2" onclick="show2();">Poll
+<input type="radio" name="yourinfo" value="2" onclick="show2()">Poll
 <!-- <input type=submit value="Submit"/> -->
 
 <script type="text/javascript">
