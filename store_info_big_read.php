@@ -141,7 +141,7 @@ echo "<ul>";
 	echo "</li>";
 	echo "<br/>";
 	echo "Sanders <?php echo $sandersPercent; ?>";
-	echo "<li style='height: 100px; width: <?php echo $sandersPercent; ?>; background-color: blue;'>"
+	echo "<li style='height: 100px; width: <?php echo $sandersPercent; ?>; background-color: blue;'>";
 	echo "</li>";
 	echo "<br/>";
 	echo "Cruz <?php echo $cruzPercent; ?>";
