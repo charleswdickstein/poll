@@ -22,13 +22,13 @@
 <input type=submit value="Submit"/>
 </form>
 <h1>Voting Key:</h1>
-	<ul>";
+	<ul>
 	<li>Hilary Clinton : 1</li>
 	<li>Donald Trump : 2</li>
 	<li>Bernie Saners : 3</li>
 	<li>Ted Cruz : 4</li>
 	<li>John Kasich : 5</li>
-	</ul>";
+	</ul>
 <?php
 //$infoChoice = $_POST['yourinfo'];
 
