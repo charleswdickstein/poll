@@ -21,7 +21,14 @@
 
 <input type=submit value="Submit"/>
 </form>
-
+<h1>Voting Key:</h1>
+	<ul>";
+	<li>Hilary Clinton : 1</li>
+	<li>Donald Trump : 2</li>
+	<li>Bernie Saners : 3</li>
+	<li>Ted Cruz : 4</li>
+	<li>John Kasich : 5</li>
+	</ul>";
 <?php
 //$infoChoice = $_POST['yourinfo'];
 
@@ -74,14 +81,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 			
 		
 		}  // end ";for $m
-	echo "<h1>Voting Key:</h1>";
-	echo "<ul>";
-	echo "<li>Hilary Clinton : 1</li>";
-	echo "<li>Donald Trump : 2</li>";
-	echo "<li>Bernie Saners : 3</li>";
-	echo "<li>Ted Cruz : 4</li>";
-	echo "<li>John Kasich : 5</li>";
-	echo "</ul>";
+	
 		print("</tr>\n");
 		}
 	
