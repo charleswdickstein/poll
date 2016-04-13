@@ -132,15 +132,15 @@ echo "<div id='poll'>";
 echo "<h1>Poll Results</h1>";
 echo "<ul>";
 
-	echo "Clinton  <?php echo $clintonPercent; ?>";
+	echo "Clinton $clintonPercent ";
 	echo "<li style='height: 100px; width: $clintonPercent; background-color: blue;'>";
 	echo "</li>";
 	echo "<br/>";
-	echo "Trump <?php echo $trumpPercent; ?>";
+	echo "Trump ";
 	echo "<li style='height: 100px; width: $trumpPercent; background-color: red;'>";
 	echo "</li>";
 	echo "<br/>";
-	echo "Sanders <?php echo $sandersPercent; ?>";
+	echo "Sanders $sandersPercent";
 	echo "<li style='height: 100px; width: $sandersPercent; background-color: blue;'>";
 	echo "</li>";
 	echo "<br/>";
