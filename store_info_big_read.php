@@ -69,7 +69,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	while ($row= fgetcsv($fp, 1024, ",")){
 	
 		$columns = count($row);
-		print("<tr>\n");
+		print("<tr id='div2'>\n");
 		for ($m=0; $m<$columns; $m++) {
 			$value = $row[$m];
 			
@@ -91,7 +91,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 					break;
 			}
 			// if ($infoChoice == 1){
-			print("<td id='div2'>".$value."</td>\n");
+			print("<td>".$value."</td>\n");
 		//}
 		
 			
