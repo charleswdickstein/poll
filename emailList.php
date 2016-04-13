@@ -29,6 +29,12 @@
 	<li>Ted Cruz : 4</li>
 	<li>John Kasich : 5</li>
 	</ul>
+	<table>
+		<tr>
+			<td>Vote</td>
+			<td>Email</td>
+		</tr>
+	</table>
 <?php
 //$infoChoice = $_POST['yourinfo'];
 
