@@ -29,7 +29,7 @@ error_reporting(E_ALL);
        method="post" onSubmit="return checkform()">
 <input type="radio" name="yourinfo" value="1" onclick="show1();">Summary<br>
 <!-- <input type="radio" name="yourinfo" value="2">Poll -->
-<input type="radio" name="yourinfo" value="2" onclick="show2();" />
+<input type="radio" name="yourinfo" value="2" onclick="show2();">Poll
 <input type=submit value="Submit"/>
 
 <script type="text/javascript">
@@ -91,7 +91,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 					break;
 			}
 			// if ($infoChoice == 1){
-			print("<td id='div1'>".$value."</td>\n");
+			print("<td id='div2'>".$value."</td>\n");
 		//}
 		
 			
