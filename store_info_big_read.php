@@ -56,7 +56,7 @@ function show2(){
 
 $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	
-	print("<table id='div1' border='1' cellspacing='2' cellpadding='2'>\n");
+	print("<table border='1' cellspacing='2' cellpadding='2'>\n");
 	
 	//print("<tr><td>Year</td><td>Jan</td><td>Feb</td><td>Mar</td><td>Apr</td><td>May</td><td>Jun</td>".
 	     //  "<td>Jul</td><td>Aug</td><td>Sep</td><td>Oct</td><td>Nov</td><td>Dec</td></tr>\n");
@@ -91,7 +91,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 					break;
 			}
 			// if ($infoChoice == 1){
-			print("<td>".$value."</td>\n");
+			print("<td id='div1'>".$value."</td>\n");
 		//}
 		
 			
