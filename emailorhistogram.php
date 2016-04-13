@@ -13,7 +13,7 @@ This page displays users' emails and their correspinding vote
 <header>
 <ul>
 	<li><a href="index.php">Home</li>
-	<li><a href="emailorpoll.php">Results</a></li>
+	<li><a href="emailorhistogram.php">Results</a></li>
 	<li><a href="myinfo.csv">Download Text File</a></li>
 </ul>
 </header>
@@ -33,11 +33,11 @@ error_reporting(E_ALL);
 <!-- One selects the information they would like to see and 
 is redirected to a page that displays their choice  -->
 
-<form action="https://aqueous-tundra-58634.herokuapp.com/emailorpoll.php"
+<form action="https://aqueous-tundra-58634.herokuapp.com/emailorhistogram.php"
        method="post" onSubmit="return checkform()">
 <input type="radio" name="yourinfo" value="1" onclick="location.href = 'emailList.php'">Email List
 
-<input type="radio" name="yourinfo" value="2" onclick="location.href = 'poll.php'">Poll
+<input type="radio" name="yourinfo" value="2" onclick="location.href = 'histogram.php'">histogram
 
 <input type=submit value="Submit"/>
 </form>

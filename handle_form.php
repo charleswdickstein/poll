@@ -15,7 +15,7 @@ the vote is recorded -->
 <header>
 <ul>
 	<li><a href="index.php">Home</li>
-	<li><a href="emailorpoll.php">Results</a></li>
+	<li><a href="emailorhistogram.php">Results</a></li>
 	<li><a href="myinfo.csv">Download Text File</a></li>
 </ul>
 </header>
