@@ -105,8 +105,14 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 ?>
 <div id="div1">
 <h1>histogram Results</h1>
-<h4>Key:</h4>
 
+<ul>
+	<li>Clinton: <?php echo $clintonCount; ?> Votes</li>
+	<li>Trump: <?php echo $trumpCount; ?> votes</li>
+	<li> Sanders: <?php echo $sandersCount; ?> votes</li>
+	<li> Cruz: <?php echo $cruzCount; ?> Votes</li>
+	<li> Kasich: <?php echo $kasichCount; ?> Votes</li>
+</ul>
 <ul>
 
 	Clinton  <?php echo $clintonPercent; ?><li style="height: 100px; width: <?php echo $clintonPercent; ?>; background-color: blue;"></li><br/>
