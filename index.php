@@ -46,7 +46,7 @@ error_reporting(E_ALL);
 <input type="radio" name="yourvote" value="4">Ted Cruz<br>
 <input type="hidden" name="yourcruzvote" value="Ted Cruz">
 <input type="radio" name="yourvote" value="5">John Kasich<br>
-<input type="hidden" name="yourkasich" value="John Kasich">
+<input type="hidden" name="yourkasichvote" value="John Kasich">
 <h2>Enter your full name: <br>
  <input id="yourname" type="text" name="yourname">
  </h2>
