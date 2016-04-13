@@ -35,7 +35,7 @@ $theDecision = array($canditateNameValue => $voteValue, $nameValue);
 <h2>Your Complete Info:</h2>
 
 <ul>
-	<li><h3>Your vote: <?php echo $canditateNameValue; ?></h3></li>
+	<!-- <li><h3>Your vote: <?php echo $canditateNameValue; ?></h3></li> -->
 <!-- 	<li><h3>Your age: <?php echo $theage; ?> </li>
 	<li><h3>Your weight: <?php echo $theweight; ?> </li> -->
 
@@ -58,10 +58,10 @@ if (($handle = fopen("myinfo.csv", "r")) !== FALSE) {
         		print "Already VOTED";
         		$hasVoted = true;
         	}
-            echo $data[$c] . "<br />\n";
+            //echo $data[$c] . "<br />\n";
         }
     }
-    echo "There are $rows rows";
+   
     fclose($handle);
 }
 	
@@ -90,9 +90,10 @@ if ($hasVoted == false){
 	fputcsv($myfile, $theDecision);
 	fclose($myfile);
 	print "<h1>Thank you for voting $nameValue</h1>";
+	print "<h1>You voted for $canditateNameValue</h1>";
 }
 else{
-	print "CANNOT VOTE CHEATER";
+	print "<h1>You have already voted. One can not vote more than once</h1>";
 }
 
 
