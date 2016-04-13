@@ -1,3 +1,10 @@
+<!-- 
+Charles Dickstein
+April 12, 2016
+This page allows the user to vote 
+for a presidential candidate with a form. 
+The data from the form is handled with a php script
+ -->
 <?php
 ini_set('display_errors', true);
 ini_set('display_startup_errors', true);
@@ -6,7 +13,7 @@ error_reporting(E_ALL);
 <html>
 <head>
 
-<title>Recording your info to the disk file!</title>
+<title>Presidential Poll</title>
 <STYLE TYPE="text/css" MEDIA="screen, projection">
 
  
@@ -21,7 +28,8 @@ error_reporting(E_ALL);
 	<li><a href="myinfo.csv">Download Text File</a></li>
 </ul>
 </header>
-	<h1>Form to vote </h1>
+	<h1>Presidential Poll</h1>
+	<!-- Form action redirects to a php script to handle the input -->
 <form action="https://aqueous-tundra-58634.herokuapp.com/handle_form.php"
        method="post" onSubmit="return checkform()">
 <input type="radio" name="yourvote" value="1" checked>Hilary Clinton<br>
@@ -43,6 +51,9 @@ error_reporting(E_ALL);
  <input id="yourname" type="text" name="yourname">
  </h2>
  
+<!-- Checks if email entered is valid and if user has already 
+voted
+ -->
 <script type="text/javascript">
 	
 	function checkform(){

@@ -1,9 +1,24 @@
+<!-- 
+Charles Dickstein 
+April 12, 2016
+This file handles the voting form data
+and determines whehter a user has voted or not already.
+If a user has voted, the vote is rejcted. Otherwise, 
+the vote is recorded -->
+
 <STYLE TYPE="text/css" MEDIA="screen, projection">
 
  
   @import url(index.css);
  
 </STYLE>
+<header>
+<ul>
+	<li><a href="index.php">Home</li>
+	<li><a href="emailorpoll.php">Results</a></li>
+	<li><a href="myinfo.csv">Download Text File</a></li>
+</ul>
+</header>
 <?php
 $canditateNameValue = "";
 $voteValue = $_POST['yourvote'];
@@ -50,7 +65,7 @@ if (($handle = fopen("myinfo.csv", "r")) !== FALSE) {
 	$hasVoted = false;
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
         $num = count($data);
-        echo "<p> $num fields in line $row: <br /></p>\n";
+        // echo "<p> $num fields in line $row: <br /></p>\n";
         $row++;
         for ($c=0; $c < $num; $c++) {
         	if (strcmp($data[$c], $nameValue) == 0){

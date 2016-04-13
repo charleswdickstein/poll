@@ -1,3 +1,11 @@
+<!--  
+Charles Dickstein
+April 12
+
+ This page displays the histogra. 
+ it reads the csv file and displays the according data
+ using css to create rectangular colored boxes -->
+
 <STYLE TYPE="text/css" MEDIA="screen, projection">
 
  
@@ -5,8 +13,21 @@
  
 </STYLE>
 <header>
-	
+<ul>
+	<li><a href="index.php">Home</li>
+	<li><a href="emailorpoll.php">Results</a></li>
+	<li><a href="myinfo.csv">Download Text File</a></li>
+</ul>
 </header>
+<form action="https://aqueous-tundra-58634.herokuapp.com/emailorpoll.php"
+       method="post" onSubmit="return checkform()">
+<input type="radio" name="yourinfo" value="1" onclick="location.href = 'emailList.php'">Poll
+
+<input type="radio" name="yourinfo" value="2" onclick="location.href = 'poll.php'">Poll
+
+<input type=submit value="Submit"/>
+</form>
+
 <?php
 //$infoChoice = $_POST['yourinfo'];
 
@@ -25,7 +46,12 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 		print("<tr>\n");
 		for ($m=0; $m<$columns; $m++) {
 			$value = $row[$m];
-			
+			// Each candidate is given a unique value 
+			// A users's vote is recorded as a number
+			// Clinton = 1 , Trump = 2 , 
+			// Sanders = 3 , Cruz = 4,
+			// Kasich = 5 
+
 			switch ($value){
 				case 1:
 					$clintonCount++;
@@ -48,22 +74,12 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 				default:
 					//do nothing
 			}
-			// if ($infoChoice == 1){
-			//print("<td>".$value."</td>\n");
-		//}
+			
 		
 			
 		
 		}  // end ";for $m
-	// echo "<h1>Voting Key:</h1>";
-	// echo "<ul>";
-	// echo "<li>Hilary Clinton : 1</li>";
-	// echo "<li>Donald Trump : 2</li>";
-	// echo "<li>Bernie Saners : 3</li>";
-	// echo "<li>Ted Cruz : 4</li>";
-	// echo "<li>John Kasich : 5</li>";
-	// echo "</ul>";
-	// 	print("</tr>\n");
+	
 		}
 	
 	
