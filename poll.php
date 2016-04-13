@@ -90,7 +90,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	
 	fclose($fp) or die("can't close the file");
 
-	$totalVotes = $clintonCount + $trumpCount + $sandersCount + $cruzCount;
+	$totalVotes = $clintonCount + $trumpCount + $sandersCount + $cruzCount + $kasichCount;
 	if ($totalVotes > 0){
 	$clintonPercent = number_format((($clintonCount/$totalVotes)*100))."%";
 	$trumpPercent = number_format((($trumpCount/$totalVotes)*100))."%";

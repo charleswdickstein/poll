@@ -39,7 +39,7 @@ switch ($voteValue){
 		$canditateNameValue = $_POST['yourcruzvote'];
 		break;
 	case '5':
-		$canditateNameValue = $_POST['yourkasichgvote'];
+		$canditateNameValue = $_POST['yourkasichvote'];
 
 }
 
