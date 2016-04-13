@@ -138,8 +138,9 @@ echo "<ul>";
 	echo "Cruz <?php echo $cruzPercent; ?><li style='height: 100px; width: <?php echo $cruzPercent; ?>; background-color: red;'></li><br/>";
 echo "</ul>";
 echo "</div>";
-?>
+
 }
+?>
 <!-- // 	$thefile = file('myinfo.csv');
 // 	$clintonCount = 0;
 // 	$trumpCount = 0;
