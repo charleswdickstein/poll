@@ -1,4 +1,9 @@
+<STYLE TYPE="text/css" MEDIA="screen, projection">
 
+ 
+  @import url(index.css);
+ 
+</STYLE>
 <?php
 $canditateNameValue = "";
 $voteValue = $_POST['yourvote'];

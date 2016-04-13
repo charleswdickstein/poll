@@ -25,7 +25,7 @@ error_reporting(E_ALL);
 
 <h3>Results</h3>
 
-<form action="https://aqueous-tundra-58634.herokuapp.com/store_info_big_read.php"
+<form action="https://aqueous-tundra-58634.herokuapp.com/emailorpoll.php"
        method="post" onSubmit="return checkform()">
 <input type="radio" name="yourinfo" value="1" onclick="location.href = 'emailList.php'">Poll
 <!-- <input type="radio" name="yourinfo" value="2">Poll -->

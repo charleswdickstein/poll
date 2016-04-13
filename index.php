@@ -7,14 +7,21 @@ error_reporting(E_ALL);
 <head>
 
 <title>Recording your info to the disk file!</title>
-</head>
-<body bgcolor=LavenderBlush>
+<STYLE TYPE="text/css" MEDIA="screen, projection">
 
+ 
+  @import url(index.css);
+ 
+</STYLE>
+</head>
+<body>
+<header>
 <ul>
-	<li><a href="store_info_big_read.php">Big Read</a></li>
+	<li><a href="emailorpoll.php">Big Read</a></li>
 	<li><a href="store_info_line_read.php">Line Read</a></li>
 	<li><a href="myinfo.csv">Text File</a></li>
 </ul>
+</header>
 	<h1>Form to vote
 <form action="https://aqueous-tundra-58634.herokuapp.com/handle_form.php"
        method="post" onSubmit="return checkform()">

@@ -1,13 +1,17 @@
+<STYLE TYPE="text/css" MEDIA="screen, projection">
+
+ 
+  @import url(index.css);
+ 
+</STYLE>
+<header>
+	
+</header>
 <?php
 //$infoChoice = $_POST['yourinfo'];
 
 
 $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
-	
-	// print("<table  id='div2' border='1' cellspacing='2' cellpadding='2'>\n");
-	
-	//print("<tr><td>Year</td><td>Jan</td><td>Feb</td><td>Mar</td><td>Apr</td><td>May</td><td>Jun</td>".
-	     //  "<td>Jul</td><td>Aug</td><td>Sep</td><td>Oct</td><td>Nov</td><td>Dec</td></tr>\n");
 	       
 	$clintonCount = 0;
 	$trumpCount = 0;
