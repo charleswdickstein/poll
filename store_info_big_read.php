@@ -12,6 +12,13 @@ error_reporting(E_ALL);
 		      margin-left: 25px;
 		      }
 		h2 {color: maroon;}	
+
+		#poll ul li{
+			height: 100px;
+			width: 100px;
+			background-color: blue;
+		}
+
 	</style>
 </head>
 <body>
@@ -21,8 +28,15 @@ error_reporting(E_ALL);
 <form action="https://aqueous-tundra-58634.herokuapp.com/store_info_big_read.php"
        method="post" onSubmit="return checkform()">
 <input type="radio" name="yourinfo" value="1" checked>Summary<br>
-<input type="radio" name="yourinfo" value="2">Poll
+<!-- <input type="radio" name="yourinfo" value="2">Poll -->
+<input type="radio" name="yourinfo" value="2" onclick="show1();" />
 <input type=submit value="Submit"/>
+
+<script type="text/javascript">
+	function show1(){
+  document.getElementById('div1').style.display ='none';
+}
+</script>
 
 
 
@@ -73,9 +87,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 			if ($infoChoice == 1){
 			print("<td>".$value."</td>\n");
 		}
-		else{
-
-		}
+		
 			
 		
 		}  // end for $m
@@ -120,6 +132,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 
 
 ?>
+<div id="div1">
 <h1>Poll Results</h1>
 <ul>
 
@@ -128,6 +141,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	Sanders <?php echo $sandersPercent; ?><li style="height: 100px; width: <?php echo $sandersPercent; ?>; background-color: blue;"></li><br/>
 	Cruz <?php echo $cruzPercent; ?><li style="height: 100px; width: <?php echo $cruzPercent; ?>; background-color: red;"></li><br/>
 </ul>
+</div>
 
 <!-- // 	$thefile = file('myinfo.csv');
 // 	$clintonCount = 0;
