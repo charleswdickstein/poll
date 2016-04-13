@@ -13,11 +13,11 @@ error_reporting(E_ALL);
 		      }
 		h2 {color: maroon;}	
 
-		#poll ul li{
+		/*#poll ul li{
 			height: 100px;
 			width: 100px;
 			background-color: blue;
-		}
+		}*/
 
 	</style>
 </head>
@@ -35,10 +35,11 @@ error_reporting(E_ALL);
 <script type="text/javascript">
 	function show1(){
   document.getElementById('div1').style.display ='none';
+  document.getElementById('div2').style.display ='block';
 }
 
 function show2(){
-  document.getElementById('div2').style.display ='none';
+  document.getElementById('div1').style.display = 'block';
 }
 </script>
 
@@ -49,7 +50,7 @@ function show2(){
 
 
 <?php
-$infoChoice = $_POST['yourinfo'];
+//$infoChoice = $_POST['yourinfo'];
 
 
 $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
