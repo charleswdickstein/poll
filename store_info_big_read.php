@@ -27,7 +27,7 @@ error_reporting(E_ALL);
 
 <form action="https://aqueous-tundra-58634.herokuapp.com/store_info_big_read.php"
        method="post" onSubmit="return checkform()">
-<input type="radio" name="yourinfo" value="1" checked>Summary<br>
+<input type="radio" name="yourinfo" value="1" onclick="show2();">Summary<br>
 <!-- <input type="radio" name="yourinfo" value="2">Poll -->
 <input type="radio" name="yourinfo" value="2" onclick="show1();" />
 <input type=submit value="Submit"/>
@@ -35,6 +35,9 @@ error_reporting(E_ALL);
 <script type="text/javascript">
 	function show1(){
   document.getElementById('div1').style.display ='none';
+}
+function show2(){
+  document.getElementById('div2').style.display ='none';
 }
 </script>
 
@@ -84,9 +87,10 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 					$cruzCount++;
 					break;
 			}
-			if ($infoChoice == 1){
+			echo "<div id='div2'";
 			print("<td>".$value."</td>\n");
-		}
+			echo "</div>";
+		
 		
 			
 		
