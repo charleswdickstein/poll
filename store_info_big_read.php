@@ -56,7 +56,7 @@ function show2(){
 
 $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	
-	print("<table border='1' cellspacing='2' cellpadding='2'>\n");
+	print("<table  id='div2' border='1' cellspacing='2' cellpadding='2'>\n");
 	
 	//print("<tr><td>Year</td><td>Jan</td><td>Feb</td><td>Mar</td><td>Apr</td><td>May</td><td>Jun</td>".
 	     //  "<td>Jul</td><td>Aug</td><td>Sep</td><td>Oct</td><td>Nov</td><td>Dec</td></tr>\n");
@@ -70,7 +70,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	while ($row= fgetcsv($fp, 1024, ",")){
 	
 		$columns = count($row);
-		print("<tr id='div2'>\n");
+		print("<tr>\n");
 		for ($m=0; $m<$columns; $m++) {
 			$value = $row[$m];
 			
@@ -118,6 +118,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	 // end while $row
 
 	print("<tr>\n");
+	print("</table>");
 	
 	fclose($fp) or die("can't close the file");
 
