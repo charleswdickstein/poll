@@ -15,15 +15,15 @@ April 12
 <header>
 <ul>
 	<li><a href="index.php">Home</li>
-	<li><a href="emailorpoll.php">Results</a></li>
+	<li><a href="emailorhistogram.php">Results</a></li>
 	<li><a href="myinfo.csv">Download Text File</a></li>
 </ul>
 </header>
-<form action="https://aqueous-tundra-58634.herokuapp.com/emailorpoll.php"
+<form action="https://aqueous-tundra-58634.herokuapp.com/emailorhistogram.php"
        method="post" onSubmit="return checkform()">
 <input type="radio" name="yourinfo" value="1" onclick="location.href = 'emailList.php'">Email List
 
-<input type="radio" name="yourinfo" value="2" onclick="location.href = 'poll.php'">Histogram
+<input type="radio" name="yourinfo" value="2" onclick="location.href = 'histogram.php'">Histogram
 
 <input type=submit value="Submit"/>
 </form>
@@ -104,7 +104,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 
 ?>
 <div id="div1">
-<h1>Poll Results</h1>
+<h1>histogram Results</h1>
 <h4>Key:</h4>
 
 <ul>
