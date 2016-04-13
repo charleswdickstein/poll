@@ -40,6 +40,7 @@ error_reporting(E_ALL);
 
 function show2(){
   document.getElementById('div1').style.display = 'block';
+  document.getElementById('div2').style.display ='none';
 }
 </script>
 
@@ -89,9 +90,9 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 					$cruzCount++;
 					break;
 			}
-			if ($infoChoice == 1){
+			// if ($infoChoice == 1){
 			print("<td>".$value."</td>\n");
-		}
+		//}
 		
 			
 		
@@ -137,7 +138,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 
 
 ?>
-<div id="div2">
+<div id="div1">
 <h1>Poll Results</h1>
 <ul>
 
