@@ -113,6 +113,6 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	Trump <?php echo $trumpPercent; ?><li style="height: 100px; width: <?php echo $trumpPercent; ?>; background-color: red;"></li><br/>
 	Sanders <?php echo $sandersPercent; ?><li style="height: 100px; width: <?php echo $sandersPercent; ?>; background-color: blue;"></li><br/>
 	Cruz <?php echo $cruzPercent; ?><li style="height: 100px; width: <?php echo $cruzPercent; ?>; background-color: red;"></li><br/>
-	Kasich <?php echo $cruzPercent; ?><li style="height: 100px; width: <?php echo $kasichPercent; ?>; background-color: red;"></li><br/>
+	Kasich <?php echo $kasichPercent; ?><li style="height: 100px; width: <?php echo $kasichPercent; ?>; background-color: red;"></li><br/>
 </ul>
 </div>
