@@ -87,9 +87,9 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 					$cruzCount++;
 					break;
 			}
-			echo "<div id='div2'";
-			print("<td>".$value."</td>\n");
-			echo "</div>";
+			// echo "<div id='div2'";
+			print("<td id='div1'>".$value."</td>\n");
+			// echo "</div>";
 		
 		
 			
@@ -136,7 +136,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 
 
 ?>
-<div id="div1">
+<div id="div2">
 <h1>Poll Results</h1>
 <ul>
 
