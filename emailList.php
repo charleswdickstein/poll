@@ -17,11 +17,11 @@
        method="post" onSubmit="return checkform()">
 <input type="radio" name="yourinfo" value="1" onclick="location.href = 'emailList.php'">Email List
 
-<input type="radio" name="yourinfo" value="2" onclick="location.href = 'poll.php'">Poll
+<input type="radio" name="yourinfo" value="2" onclick="location.href = 'poll.php'">Histogram
 
 <input type=submit value="Submit"/>
 </form>
-<h1>Voting Key:</h1>
+<h3>Voting Key:</h3>
 	<ul>
 	<li>Hilary Clinton : 1</li>
 	<li>Donald Trump : 2</li>

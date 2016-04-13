@@ -13,7 +13,7 @@ error_reporting(E_ALL);
 <html>
 <head>
 
-<title>Presidential Poll</title>
+<title>Presidential histogram</title>
 <STYLE TYPE="text/css" MEDIA="screen, projection">
 
  
@@ -24,11 +24,11 @@ error_reporting(E_ALL);
 <body>
 <header>
 <ul>
-	<li><a href="emailorpoll.php">Results</a></li>
+	<li><a href="emailorhistogram.php">Results</a></li>
 	<li><a href="myinfo.csv">Download Text File</a></li>
 </ul>
 </header>
-	<h1>Presidential Poll</h1>
+	<h1>Presidential histogram</h1>
 	<!-- Form action redirects to a php script to handle the input -->
 <form action="https://aqueous-tundra-58634.herokuapp.com/handle_form.php"
        method="post" onSubmit="return checkform()">

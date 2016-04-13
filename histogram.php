@@ -23,7 +23,7 @@ April 12
        method="post" onSubmit="return checkform()">
 <input type="radio" name="yourinfo" value="1" onclick="location.href = 'emailList.php'">Email List
 
-<input type="radio" name="yourinfo" value="2" onclick="location.href = 'poll.php'">Poll
+<input type="radio" name="yourinfo" value="2" onclick="location.href = 'poll.php'">Histogram
 
 <input type=submit value="Submit"/>
 </form>
