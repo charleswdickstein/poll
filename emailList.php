@@ -29,7 +29,7 @@
 	<li>Ted Cruz : 4</li>
 	<li>John Kasich : 5</li>
 	</ul>
-	<table>
+	<table border='1' cellspacing='2' cellpadding='2'>
 		<tr>
 			<td>Vote</td>
 			<td>Email</td>
