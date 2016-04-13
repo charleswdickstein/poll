@@ -27,10 +27,10 @@ error_reporting(E_ALL);
 
 <form action="https://aqueous-tundra-58634.herokuapp.com/store_info_big_read.php"
        method="post" onSubmit="return checkform()">
-<input type="radio" name="yourinfo" value="1" onclick="show1();">Summary<br>
+<input type="radio" name="yourinfo" value="1" onclick="show1();" checked>Summary<br>
 <!-- <input type="radio" name="yourinfo" value="2">Poll -->
 <input type="radio" name="yourinfo" value="2" onclick="show2();">Poll
-<input type=submit value="Submit"/>
+<!-- <input type=submit value="Submit"/> -->
 
 <script type="text/javascript">
 	function show1(){
@@ -103,6 +103,7 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 			
 		
 		}  // end ";for $m
+	echo "<h1>Voting Key:</h1>";
 	echo "<ul>";
 	echo "<li>Hilary Clinton : 1</li>";
 	echo "<li>Donald Trump : 2</li>";
