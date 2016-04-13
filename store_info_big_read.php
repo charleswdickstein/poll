@@ -27,12 +27,20 @@ error_reporting(E_ALL);
 
 <form action="https://aqueous-tundra-58634.herokuapp.com/store_info_big_read.php"
        method="post" onSubmit="return checkform()">
-<input type="radio" name="yourinfo" value="1" checked>Summary<br>
+<input type="radio" name="yourinfo" value="1" onclick="show1();">Summary<br>
 <!-- <input type="radio" name="yourinfo" value="2">Poll -->
-<input type="radio" name="yourinfo" value="2" />
+<input type="radio" name="yourinfo" value="2" onclick="show2();" />
 <input type=submit value="Submit"/>
 
+<script type="text/javascript">
+	function show1(){
+  document.getElementById('div1').style.display ='none';
+}
 
+function show2(){
+  document.getElementById('div2').style.display ='none';
+}
+</script>
 
 
 
@@ -46,7 +54,7 @@ $infoChoice = $_POST['yourinfo'];
 
 $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	
-	print("<table border='1' cellspacing='2' cellpadding='2'>\n");
+	print("<table id='div1' border='1' cellspacing='2' cellpadding='2'>\n");
 	
 	//print("<tr><td>Year</td><td>Jan</td><td>Feb</td><td>Mar</td><td>Apr</td><td>May</td><td>Jun</td>".
 	     //  "<td>Jul</td><td>Aug</td><td>Sep</td><td>Oct</td><td>Nov</td><td>Dec</td></tr>\n");
@@ -127,32 +135,18 @@ $fp = fopen('myinfo.csv',"r") or die("can't open the file!");
 	// echo "</table>";
 
 
-if ($infoChoice == 2 && $infoChoice != 1){
-echo "<div id='poll'>";
-echo "<h1>Poll Results</h1>";
-echo "<ul>";
-
-	echo "Clinton $clintonPercent ";
-	echo "<li style='height: 100px; width: $clintonPercent; background-color: blue;'>";
-	echo "</li>";
-	echo "<br/>";
-	echo "Trump ";
-	echo "<li style='height: 100px; width: $trumpPercent; background-color: red;'>";
-	echo "</li>";
-	echo "<br/>";
-	echo "Sanders $sandersPercent";
-	echo "<li style='height: 100px; width: $sandersPercent; background-color: blue;'>";
-	echo "</li>";
-	echo "<br/>";
-	echo "Cruz: $cruzPercent: ";
-	echo "<li style='height: 100px; width: $cruzPercent; background-color: red;'>";
-	echo "</li>";
-	echo "<br/>";
-echo "</ul>";
-echo "</div>";
-
-}
 ?>
+<div id="div2">
+<h1>Poll Results</h1>
+<ul>
+
+	Clinton  <?php echo $clintonPercent; ?><li style="height: 100px; width: <?php echo $clintonPercent; ?>; background-color: blue;"></li><br/>
+	Trump <?php echo $trumpPercent; ?><li style="height: 100px; width: <?php echo $trumpPercent; ?>; background-color: red;"></li><br/>
+	Sanders <?php echo $sandersPercent; ?><li style="height: 100px; width: <?php echo $sandersPercent; ?>; background-color: blue;"></li><br/>
+	Cruz <?php echo $cruzPercent; ?><li style="height: 100px; width: <?php echo $cruzPercent; ?>; background-color: red;"></li><br/>
+</ul>
+</div>
+
 <!-- // 	$thefile = file('myinfo.csv');
 // 	$clintonCount = 0;
 // 	$trumpCount = 0;
