@@ -132,10 +132,22 @@ echo "<div id='poll'>";
 echo "<h1>Poll Results</h1>";
 echo "<ul>";
 
-	echo "Clinton  <?php echo $clintonPercent; ?><li style='height: 100px; width: <?php echo $clintonPercent; ?>; background-color: blue;'></li><br/>";
-	echo "Trump <?php echo $trumpPercent; ?><li style='height: 100px; width: <?php echo $trumpPercent; ?>; background-color: red;'></li><br/>";
-	echo "Sanders <?php echo $sandersPercent; ?><li style='height: 100px; width: <?php echo $sandersPercent; ?>; background-color: blue;'></li><br/>";
-	echo "Cruz <?php echo $cruzPercent; ?><li style='height: 100px; width: <?php echo $cruzPercent; ?>; background-color: red;'></li><br/>";
+	echo "Clinton  <?php echo $clintonPercent; ?>";
+	echo "<li style='height: 100px; width: <?php echo $clintonPercent; ?>; background-color: blue;'>";
+	echo "</li>";
+	echo "<br/>";
+	echo "Trump <?php echo $trumpPercent; ?>";
+	echo "<li style='height: 100px; width: <?php echo $trumpPercent; ?>; background-color: red;'>";
+	echo "</li>";
+	echo "<br/>";
+	echo "Sanders <?php echo $sandersPercent; ?>";
+	echo "<li style='height: 100px; width: <?php echo $sandersPercent; ?>; background-color: blue;'>"
+	echo "</li>";
+	echo "<br/>";
+	echo "Cruz <?php echo $cruzPercent; ?>";
+	echo "<li style='height: 100px; width: <?php echo $cruzPercent; ?>; background-color: red;'>";
+	echo "</li>";
+	echo "<br/>";
 echo "</ul>";
 echo "</div>";
 
