@@ -17,12 +17,11 @@ error_reporting(E_ALL);
 <body>
 <header>
 <ul>
-	<li><a href="emailorpoll.php">Big Read</a></li>
-	<li><a href="store_info_line_read.php">Line Read</a></li>
-	<li><a href="myinfo.csv">Text File</a></li>
+	<li><a href="emailorpoll.php">Results</a></li>
+	<li><a href="myinfo.csv">Download Text File</a></li>
 </ul>
 </header>
-	<h1>Form to vote
+	<h1>Form to vote </h1>
 <form action="https://aqueous-tundra-58634.herokuapp.com/handle_form.php"
        method="post" onSubmit="return checkform()">
 <input type="radio" name="yourvote" value="1" checked>Hilary Clinton<br>
@@ -44,13 +43,6 @@ error_reporting(E_ALL);
  <input id="yourname" type="text" name="yourname">
  </h2>
  
-<!-- <h2>Enter your age: <br>
- <input type=text name=yourage>
- </h2>
- 
-<h2>Enter your weight: <br>
- <input type=text name=yourweight>
- </h2> -->
 <script type="text/javascript">
 	
 	function checkform(){
