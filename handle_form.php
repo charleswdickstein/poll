@@ -89,7 +89,7 @@ if ($hasVoted == false){
 	$myfile = fopen('myinfo.csv', 'a');
 	fputcsv($myfile, $theDecision);
 	fclose($myfile);
-	print "<h1>Thank you for voting $nameValue</h1>"
+	print "<h1>Thank you for voting $nameValue</h1>";
 }
 else{
 	print "CANNOT VOTE CHEATER";
